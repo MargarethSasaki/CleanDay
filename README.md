@@ -7,7 +7,7 @@ Projeto realizado para o TCC, programação de um site sobre coleta seletiva par
 Este é um projeto TCC usando Laravel que visa fornecer informações sobre os ecopontos de coleta seletiva mais próximos em uma determinada região. O site permite aos usuários localizar ecopontos, obter informações sobre os tipos de materiais aceitos, a maneira correta de separar e contribuir com informações adicionais.
 
 
-## Tabela de Conteúdo
+# Tabela de Conteúdo
 
 - [Visão Geral](#visão-geral)
 - [Instalação](#instalação)
@@ -32,22 +32,22 @@ Siga estas etapas para configurar e executar o projeto localmente:
 1. Clone o repositório:
 git clone https://github.com/MargarethSasaki/CleanDay.git
 
-# Entre na pasta do projeto
+2. Entre na pasta do projeto
 cd cleanday
 
-# Instale as dependências
+3. Instale as dependências
 composer install
 
-# Copie o arquivo .env.example para .env e configure as informações do banco de dados, entre outras configurações:
+4. Copie o arquivo .env.example para .env e configure as informações do banco de dados, entre outras configurações:
 cp .env.example .env
 
-# Gere a chave de criptografia do aplicativo:
+5. Gere a chave de criptografia do aplicativo:
 php artisan key:generate
 
-# Execute as migrações para criar as tabelas do banco de dados:
+6. Execute as migrações para criar as tabelas do banco de dados:
 php artisan migrate
 
-# Inicie o servidor de desenvolvimento:
+7. Inicie o servidor de desenvolvimento:
 php artisan serve
 
 ## Uso
