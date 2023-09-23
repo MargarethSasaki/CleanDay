@@ -30,7 +30,7 @@ Neste projeto, utilizamos o framework Laravel para criar um site interativo de c
 Siga estas etapas para configurar e executar o projeto localmente:
 
 1. Clone o repositório:
-git clone https://github.com/seu-usuario/seu-projeto.git](https://github.com/MargarethSasaki/CleanDay.git
+git clone https://github.com/MargarethSasaki/CleanDay.git
 
 # Entre na pasta do projeto
 cd cleanday
