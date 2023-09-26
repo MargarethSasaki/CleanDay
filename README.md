@@ -66,6 +66,7 @@ Envie um "pull request" explicando suas alterações e referenciando o "issue" c
 Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE.md para obter detalhes.
 
 ## Contato
-Para entrar em contato com os mantenedores do projeto, envie um email para .
+Para entrar em contato com os mantenedores do projeto, envie um email para cleanday@gmail.com
+
 
  
