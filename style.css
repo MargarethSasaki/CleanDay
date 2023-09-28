@@ -1,0 +1,315 @@
+/* Estilos para telas menores (até 768px de largura) */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Exibir itens da lista em coluna */
+        text-align: center; /* Centralizar texto */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
+    }
+}
+
+
+/* Reset de estilos padrão do navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Estilizando a navbar */
+.navbar {
+    background-color: #2F8240; /* Cor de fundo da navbar */
+}
+
+.navbar ul {
+    list-style: none; /* Remover marcadores de lista */
+    display: flex; /* Exibir os itens da lista em linha */
+    justify-content: left; /* Colocar itens na direita  horizontalmente */
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
+    font-family: 'All the Way to the Sun', sans-serif;
+    font-size: 20px;
+    
+                                                
+}
+
+.navbar li {
+    margin: 0 60px; /* Espaçamento horizontal entre os itens da lista */
+}
+
+.navbar a {
+    text-decoration: none; /* Remover sublinhado dos links */
+    color: #12FF46; /* Cor do texto dos links */
+    font-weight: bold; /* Estilo de fonte negrito */
+}
+
+body{
+    background-color: #011E11;
+}
+
+/* Removendo estilos padrão do botão */
+.form button {
+    border: none; /* Remove a borda do botão */
+    background: none; /* Remove o fundo do botão */
+    color: #8b8ba7; /* Define a cor do texto do botão como um tom de cinza */
+  }
+
+
+  
+  /* Estilizando o contêiner de entrada */
+  .form {
+    --timing: 0.3s; /* Define uma variável para o tempo de transição */
+    --width-of-input: 550px; /* Define a largura do contêiner de entrada */
+    --height-of-input: 30px; /* Define a altura do contêiner de entrada */
+    --border-height: 2px; /* Define a altura da borda animada */
+    --input-bg: #fff; /* Define a cor de fundo padrão como branco */
+    --border-color: #2f2ee9; /* Define a cor da borda */
+    --border-radius: 30px; /* Define o raio da borda do contêiner */
+    --after-border-radius: 1px; /* Define o raio da borda após a animação */
+    position: relative; /* Define a posição como relativa para o posicionamento do pseudo-elemento */
+    width: var(--width-of-input); /* Define a largura do contêiner */
+    height: var(--height-of-input); /* Define a altura do contêiner */
+    display: flex; /* Exibe os elementos filhos em linha */
+    align-items: center; /* Alinha os elementos verticalmente */
+    padding-inline: 0.8em; /* Adiciona espaço interno horizontal */
+    border-radius: var(--border-radius); /* Define o raio da borda do contêiner */
+    transition: border-radius 0.5s ease; /* Adiciona uma animação de transição suave para a mudança do raio da borda */
+    background: var(--input-bg, #fff); /* Define a cor de fundo do contêiner */
+    
+  }
+  
+  /* Estilizando o campo de entrada de texto */
+  .input {
+    font-size: 0.9rem; /* Define o tamanho da fonte */
+    background-color: transparent; /* Torna o fundo do campo de entrada transparente */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    padding-inline: 0.5em; /* Adiciona espaço interno horizontal ao campo de entrada */
+    padding-block: 0.7em; /* Adiciona espaço interno vertical ao campo de entrada */
+    border: none; /* Remove a borda do campo de entrada */
+  }
+  
+
+
+
+
+  /* Estilizando a borda animada */
+  .form:before {
+    content: ""; /* Adiciona conteúdo antes do contêiner */
+    position: absolute; /* Define a posição como absoluta para posicionamento */
+    background: var(--border-color); /* Define a cor de fundo da borda */
+    transform: scaleX(0); /* Inicialmente, a largura da borda é zero, tornando-a invisível */
+    transform-origin: center; /* Define o ponto de origem da transformação no centro */
+    width: 100%; /* Define a largura como 100% */
+    height: var(--border-height); /* Define a altura da borda */
+    left: 0; /* Alinha a borda à esquerda */
+    bottom: 0; /* Alinha a borda na parte inferior */
+    border-radius: 1px; /* Define o raio da borda da linha */
+    transition: transform var(--timing) ease; /* Adiciona uma animação de transição para a transformação da borda */
+  }
+
+
+  
+  /* Estilizando o contêiner de entrada quando está em foco */
+  .form:focus-within {
+    border-radius: var(--after-border-radius); /* Muda o raio da borda após a animação quando o contêiner está em foco */
+  }
+  
+
+
+  /* Removendo o contorno padrão do campo de entrada em foco */
+  input:focus {
+    outline: none; /* Remove o contorno padrão do campo de entrada em foco */
+  }
+
+
+  
+  /* Animação da borda quando o contêiner de entrada está em foco */
+  .form:focus-within:before {
+    transform: scale(1); /* Aumenta a largura da borda para torná-la visível quando o contêiner está em foco */
+  }
+  
+
+
+  /* Estilizando o botão de redefinição (limpar) */
+  .reset {
+    border: none; /* Remove a borda do botão de redefinição */
+    background: none; /* Remove o fundo do botão de redefinição */
+    opacity: 0; /* Torna o botão de redefinição inicialmente transparente */
+    visibility: hidden; /* Torna o botão de redefinição inicialmente oculto */
+  }
+
+
+  
+  /* Mostra o botão de redefinição quando há texto no campo de entrada */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1; /* Torna o botão de redefinição visível quando há texto no campo de entrada */
+    visibility: visible; /* Torna o botão de redefinição visível quando há texto no campo de entrada */
+  }
+
+
+  /* Define o tamanho dos ícones SVG */
+  .form svg {
+    width: 17px; /* Define a largura dos ícones SVG */
+    margin-top: 3px; /* Adiciona espaço superior para ajustar verticalmente os ícones */
+  }
+
+
+  /* Estilos para o botão */
+.Btn {
+    margin-right: 100%;
+    margin-left: 50%;
+    width: 38%; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 40px; /* Raio da borda para criar uma forma arredondada */
+    border: none; /* Remove a borda do botão */
+    display: flex; /* Exibe os elementos filhos em linha */
+    align-items: center; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    color: black; /* Cor do texto */
+    background-color: transparent; /* Cor de fundo transparente */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    position: relative; /* Define a posição como relativa para posicionar elementos internos */
+    background: #12FF46; /* Gradiente de fundo */
+    transition-duration: .3s; /* Duração da transição para animações */
+    letter-spacing: 1.2px; /* Espaçamento entre caracteres do texto */
+    font-size: 18px;
+    font-family: 'All the Way to the Sun', sans-serif;
+    text-decoration: underline;
+    justify-content: center;
+    position: absolute;
+    position: relative;
+    margin-top: 3%;
+       
+    
+    
+    
+                                                
+  }
+  
+  /* Estilos para o preenchimento do ícone no botão */
+  .svgIcon path {
+    fill: white; /* Preenchimento do ícone com a cor branca */
+  }
+  
+  /* Estilos para a animação quando o botão está em foco */
+  .Btn:hover {
+    transform: scale(0.95); /* Reduz ligeiramente o tamanho do botão */
+    transition-duration: .3s; /* Duração da transição para animação */
+  }
+  
+  /* Pseudo-elemento ::before para criar uma borda inferior animada */
+  .Btn::before {
+    content: ""; /* Adiciona conteúdo antes do botão */
+    position: absolute; /* Define a posição como absoluta para posicionar o elemento */
+    width: 80%; /* Largura do elemento pseudo */
+    height: 30%; /* Altura do elemento pseudo */
+    background: #12FF46; /* Gradiente de fundo */
+    filter: blur(10px); /* Aplica um desfoque ao elemento */
+    bottom: -3px; /* Desloca o elemento para baixo */
+    z-index: -1; /* Coloca o elemento atrás do botão */
+    transition-duration: .3s; /* Duração da transição para animação */
+  }
+  
+  /* Estilos para a animação quando o botão está em foco */
+  .Btn:hover::before {
+    bottom: -1px; /* Desloca ligeiramente o elemento para cima */
+    filter: blur(5px); /* Reduz o desfoque do elemento */
+    transition-duration: .3s; /* Duração da transição para animação */
+  }
+  
+ 
+ .texto {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+  }
+  
+  .horizontal-list {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    text-align: left; /* Alinha o conteúdo da lista à esquerda */
+  }
+  
+  .horizontal-list li {
+    display: inline-block; /* Exibe os elementos <li> em linha */
+    vertical-align: top; /* Alinha-os ao topo */
+    margin-right: 20px; /* Adiciona espaçamento entre os elementos (ajuste conforme necessário) */
+  }
+  
+  h1 {
+    height: 80%;
+    width: 40%;
+    font-size: 24px; /* Define o tamanho da fonte do título */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior ao título */
+    font-family: 'DM Sans', sans-serif;
+    color: aliceblue;
+    font-size: 55px;
+    justify-content: center;
+    margin-left: 40%;
+
+
+  }
+  
+  
+  .cadastro {
+    text-decoration: none; /* Remove o sublinhado do link */
+    padding: 1%;
+    font-size: 20px;
+    font-family: 'All the Way to the Sun', sans-serif;
+    color: #12FF46;
+    text-decoration: underline;
+    margin-right: 0;
+    margin-left: 62%;
+    font-weight: bold
+  }
+  
+  .cadastro:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+  }
+  
+  img{
+    margin-left: 50%;
+    height: 60%;
+    margin-bottom: 2px;
+  }
+
+  .recicle{
+    background-color: #2F8240;
+    padding: 5%;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 0;
+    
+  }
+
+  .reci{
+    color: #011E11;
+    font-family: 'DM Sans', sans-serif ;
+    font-weight: bold;
+    margin-left: 70%;
+    text-align: center;
+  }
+
+p{
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    margin-left: 70%;
+  
+}
+
+.reciclar{
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    text-align: left; /* Alinha o conteúdo da lista à esquerda */
+    
+}
+
+.reciclar li {
+    display: inline-block; /* Exibe os elementos <li> em linha */
+    vertical-align: top; /* Alinha-os ao topo */
+    margin-right: 20px; /* Adiciona espaçamento entre os elementos (ajuste conforme necessário) */ 
+  
+}
+
+  
+  
