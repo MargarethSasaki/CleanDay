@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb04unidades', function (Blueprint $table) {
-            $table->id('tb04id')->notNullable();
+            $table->integer('tb04id')->auto_increment()->unique();
             $table->string('tb04nome', 255)->notNullable();
             $table->string('tb04horarioFunc', 255)->nullable();
             $table->text('tb04comentario')->nullable();

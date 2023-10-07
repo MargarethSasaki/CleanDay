@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb03material', function (Blueprint $table) {
-            $table->id('tb03id')->notNullable();
+            $table->integer('tb03id')->auto_increment()->unique();
             $table->string('tb03nome', 255)->notNullable();
         });
     }

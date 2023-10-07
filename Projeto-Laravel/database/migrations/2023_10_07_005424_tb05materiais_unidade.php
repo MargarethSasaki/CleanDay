@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -11,10 +12,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb05materiais_unidades', function (Blueprint $table) {
-            $table->id('tb05id')->notNullable();
+        Schema::create('tb05materiais_unidade', function (Blueprint $table) {
+            $table->integer('tb05id')->auto_increment()->unique();
             $table->integer('tb05id_unidade')->notNullable();
             $table->integer('tb05id_material')->notNullable();
+        });
+        Schema::table('tb05materiais_unidade', function (Blueprint $table) {
+            $table->foreign('tb05id_material')->references('tb03id')->on('tb03material');
+            $table->foreign('tb05id_unidade')->references('tb04id')->on('tb04unidades');
         });
     }
 

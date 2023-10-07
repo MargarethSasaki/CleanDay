@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb01usuarios', function (Blueprint $table) {
-            $table->id('tb01id')->notNullable();
+            $table->integer('tb01id')->auto_increment()->unique();
             $table->string('tb01nome', 255)->notNullable();
             $table->string('tb01sobrenome', 255)->notNullable();
             $table->date('tb01dtNasc')->notNullable();
