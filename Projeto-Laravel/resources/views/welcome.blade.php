@@ -343,6 +343,11 @@ reciclar li {
 }
 
 
+
+
+
+
+
 /* ----------   Cards ----------------- */ 
 
 
@@ -443,6 +448,12 @@ img{
   color: black;
 }
 
+
+
+
+
+
+
            
         </style>
 
@@ -499,12 +510,13 @@ img{
         </li>
 
       </ul>
-    </div>
     
+    </div>
+
     <div class="recicle">
 
       <ul class="reciclar">
-        <li><img src="img/recicle.JPG" alt="" class="imagem"></li>
+        <!--<li><img src="img/recicle.JPG" alt="" class="imagem"></li>-->
         <li>
           <h1 class="reci">Recicle</h1>
           <p>
@@ -519,8 +531,59 @@ img{
       </ul>
     </div>
 
+
+
+
+
+
+
+
+
+    <!--Cards-->
+
+
+<div class="materiais">
+
+
+
+    <div class="card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <img src="img/Eletronicos.jpg" alt=""></svg>
+        <div class="card__content">
+            <p class="card__title">Eletronicos</p>
+            <p class="card__description">Lixo eletrônico, também conhecido como e-lixo ou resíduo eletrônico, refere-se a equipamentos eletrônicos descartados, obsoletos ou danificados, como computadores, celulares, tablets, televisores e outros dispositivos eletrônicos.</p>
+            <button class="card__button">Clique</button>
+            
+        </div>
+    </div>
+
+
+    <div class="card">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><img src="img/latinha.jpg" alt=""></svg>
+    <div class="card__content">
+        <p class="card__title">Latinhas</p>
+        <p class="card__description">A "latinha" geralmente se refere a uma lata de alumínio, que é uma embalagem comum para bebidas e alimentos.</p>
+        <button class="card__button">Clique</button>
+        
+    </div>
+    </div>
+
+
+    <div class="card">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><img src="img/medicamentos.jpg" alt=""></svg>
+    <div class="card__content">
+        <p class="card__title">Medicamentos</p>
+        <p class="card__description">Medicamentos que são considerados "lixos" geralmente se referem a medicamentos vencidos, não utilizados ou que foram descartados de maneira inadequada.</p>
+        <button class="card__button">Clique</button> 
+  
+    </div>
+
+
+    
+    <h2> <a href="#"> <p> Clique aqui para mais materiais </p></a> </h2>
+
+    </div>
+
+</div>
+
     </body>
 </html>
-
-
-
