@@ -1,0 +1,81 @@
+@font-face{
+    font-family: 'DMsans'; /* Escolha um nome para a sua fonte */
+  src: url(fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf) format('woff2'), /* Formato recomendado para a web */
+       /* url('caminho-para-o-arquivo-fonte.woff') format('woff'); Formato de fallback para compatibilidade */
+  /* Você pode adicionar outras variações da sua fonte aqui, como font-weight e font-style */
+}
+
+html,
+body{
+    font-family: 'DMsans';
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.centralizar{
+    display: flex;
+    justify-content: center;
+}
+.controller{
+    display: flex;
+    align-items: center;
+}
+.container-dashboard {
+    display: flex;
+    height: 100%;
+}
+aside{
+    flex: 1;
+    padding: 10px;
+    background-color: #42f575;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+aside h2{
+    margin-bottom: 5px;
+}
+.container-img img{
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+.input-aside{
+    width: 80%;
+    height: 1.2rem;
+    outline: none;
+}
+
+.selecao-materiais{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #82f6a3;
+    
+}
+.selecao-materiais .controller{
+    margin-top: 0.5rem;
+}
+
+aside span{
+    font-size: 18px;
+}
+#enviarAside button{
+    width: 80%;
+    height: 3rem;
+    margin-top:3rem;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+main{
+    flex: 3;
+    
+}
+.nav{
+    height: 10%;
+}
+#gmp-map {
+    height: 90%;
+}
+
