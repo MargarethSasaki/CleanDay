@@ -13,9 +13,9 @@
   <body>
     <div class="container-dashboard">
         <aside>
-            <!-- <div class="container-img centralizar">
-                <img src="https://picsum.photos/400/300" alt="logo">
-            </div> -->
+            <div class="container-img centralizar">
+                <img src="/img/logo.png" alt="logo" >
+            </div>
             <!-- <form action="" method="post"> -->
             <div class="container-reciclar">
                 <h2>Buscar Local</h2>

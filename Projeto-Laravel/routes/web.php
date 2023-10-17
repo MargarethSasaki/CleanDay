@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controller\MapController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/coleta', function () {
     return view('mapa');
 });
+Route::get('/consulta', [MapController::class, 'consulta']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
