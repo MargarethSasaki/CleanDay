@@ -27,7 +27,7 @@ body{
 aside{
     flex: 1;
     padding: 10px;
-    background-color: #42f575;
+    background-color: #2F8240;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -36,19 +36,22 @@ aside h2{
 }
 .container-img img{
     border-radius: 5px;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    width: 85%;
 }
 .input-aside{
-    width: 80%;
-    height: 1.2rem;
+    width: 95%;
+    height: 1.5rem;
     outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .selecao-materiais{
     margin-top: 1rem;
     padding: 1rem;
-    background-color: #82f6a3;
-    
+    background-color: #3f9650;
+    border-radius: 5px;
 }
 .selecao-materiais .controller{
     margin-top: 0.5rem;
