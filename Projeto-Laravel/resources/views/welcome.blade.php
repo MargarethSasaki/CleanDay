@@ -24,23 +24,6 @@
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Materiais</a></li>  
 
-
-            <!--Barra de pesquisa-->
-            
-            <form class="form">
-              <button>
-                  <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                      <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-              </button>
-              <input class="input" placeholder="Pesquisar" required="" type="text">
-              <button class="reset" type="reset">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-              </button>
-          </form>
-        </ul>
     </nav>
 
     <div class="texto">
@@ -68,7 +51,7 @@
         <!--<li><img src="img/recicle.JPG" alt="" class="imagem"></li>-->
         <li>
           <h1 class="reci">Recicle</h1>
-          <p>
+          <p >
             Reciclar é uma ação fundamental para a preservação ambiental, pois reduz a poluição,
             conserva recursos naturais e diminui as emissões de gases de efeito estufa. Além disso, 
             a reciclagem estimula a economia, criando empregos e promovendo a conscientização sobre a 
@@ -125,14 +108,15 @@
         <button class="card__button">Clique</button> 
   
     </div>
-
-
-    
-    <h2> <a href="#"> <p> Clique aqui para mais materiais </p></a> </h2>
-
     </div>
-
 </div>
+
+
+
+ <a href="#" > <p class="MaisMat"> Clique aqui para mais materiais </p></a> 
+
+
+
 
     </body>
 </html>
