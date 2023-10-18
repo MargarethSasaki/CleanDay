@@ -38,7 +38,7 @@
             <svg class="svgIcon" viewBox="0 0 512 512" height="1.2em" text-stroke=""><path></path></svg>
             Clique para o Login
           </button>
-          <h2><a href="#" class="cadastro">cadastre-se</a></h2>
+          <h2><a href="/register" class="cadastro">cadastre-se</a></h2>
         </li>
 
       </ul>
