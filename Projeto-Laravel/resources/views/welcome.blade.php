@@ -34,10 +34,12 @@
 
         <li>
           <h1>Um projeto para salvar o mundo</h1>
+          <a href="/login">
           <button class="Btn">
             <svg class="svgIcon" viewBox="0 0 512 512" height="1.2em" text-stroke=""><path></path></svg>
             Clique para o Login
           </button>
+          </a>
           <h2><a href="/register" class="cadastro">cadastre-se</a></h2>
         </li>
 
