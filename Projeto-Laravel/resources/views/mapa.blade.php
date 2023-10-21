@@ -20,7 +20,7 @@
             <div class="container-reciclar">
                 <h2>Buscar Local</h2>
                 
-                <input type="text" name="busca" id="busca" class="input-aside" placeholder="Buscar" value="Sao Paulo">
+                <input type="text" name="busca" id="busca" class="input-aside" placeholder="Buscar" value="Etec zona Leste">
                 
                 <h2>Raio em km</h2>
                 
@@ -47,6 +47,10 @@
                     <div class="controller">
                         <input type="checkbox" name="" id="">
                         <span>Plástico</span>
+                    </div>
+                    <div class="controller">
+                        <input type="checkbox" name="" id="">
+                        <span>Óleo de cozinha</span>
                     </div>
                 </div>
             </div>

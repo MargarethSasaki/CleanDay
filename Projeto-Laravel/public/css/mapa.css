@@ -30,9 +30,18 @@ aside{
     background-color: #2F8240;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    overflow: auto;
 }
 aside h2{
     margin-bottom: 5px;
+}
+aside::-webkit-scrollbar{
+    width: 5px;
+}
+aside::-webkit-scrollbar-thumb{
+    background-color: #80e293;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    /* border: 3px solid orange;  creates padding around scroll thumb */
 }
 .container-img img{
     border-radius: 5px;

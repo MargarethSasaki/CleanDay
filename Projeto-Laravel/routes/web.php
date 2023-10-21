@@ -42,23 +42,21 @@ Route::get('/coleta', function () {
 
 });
 
-Route::get('/consulta', function () {
+Route::get('/consulta/{res}', function ($res) {
+    $materiaisJSON = json_decode($res);
     // Primeiro, obtenha o ID do material com base no nome fornecido em $res.
-    $material = DB::table('tb03material')
+    $materialIDs = DB::table('tb03material')
         ->select('tb03material.id') // Especifique a tabela para evitar ambiguidade
-        ->where('tb03nome', 'Óleo de cozinha')
-        ->first();
+        ->whereIn('tb03nome', $materiaisJSON->materiais)
+        ->get();
 
-    if (!$material) {
-        // Lide com o caso em que o material não foi encontrado.
-        return response()->json(['message' => 'Material não encontrado'], 404);
-    }
-
-    // Em seguida, use o ID do material para obter os resultados desejados da tabela tb05materiais_unidade.
+    
+    
+    // // Em seguida, use o ID do material para obter os resultados desejados da tabela tb05materiais_unidade.
     $resultados = DB::table('tb05materiais_unidade')
         ->select('tb05materiais_unidade.tb05id_unidade') // Especifique a tabela para evitar ambiguidade
         ->join('tb03material', 'tb05materiais_unidade.tb05id_material', '=', 'tb03material.id')
-        ->where('tb05id_material', $material->id)
+        ->whereIn('tb05id_material', $materialIDs->pluck('id')->all())
         ->get();
 
         $unidades = DB::table('tb04unidades')

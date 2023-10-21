@@ -34,18 +34,18 @@ async function initMap(dados = "") {
       zoomControl: true,
       streetViewControl: false
     });
-    console.log(etecZonaLeste)
+    // console.log(etecZonaLeste)
     
     
     
 
     // GEOCODER
     if (dados) {
-        let materiais = dados[2].join(", ")
+        let materiais = dados[2]
         let posicoes = []
         let centroPos = await getLocal(dados[0])
         centroBusca(map,centroPos,dados[1])
-        fetch("/consulta")
+        fetch("/consulta/" + JSON.stringify({materiais}))
         .then((resposta) => {
             if (!resposta.ok) {
                 throw new Error('Erro na solicitação');
@@ -53,7 +53,7 @@ async function initMap(dados = "") {
             return resposta.json();
         })
         .then((resposta) => {
-            console.log(resposta.endereco)
+            console.log(resposta)
             let locais = resposta.endereco; // Defina locais dentro deste escopo
             locais.map((el) => {
                 posicoes.push({'lat':el.tb02latitude,'lng':el.tb02longitude})
@@ -62,14 +62,14 @@ async function initMap(dados = "") {
             // console.log(posicoes);
             for (let i = 0; i < posicoes.length; i++) {
                 // Calcular a distância entre as coordenadas
-                const distancia = calcularDistancia(etecZonaLeste.lat, etecZonaLeste.lng, posicoes[i].lat, posicoes[i].lng, (dados[1]*1000));
-
+                const distancia = calcularDistancia(etecZonaLeste.lat, etecZonaLeste.lng, posicoes[i].lat, posicoes[i].lng, dados[1]);
                 // Verificar se a distância é menor ou igual a 1 km
                 if (distancia <= 1) {
-                    console.log(posicoes[i])
+                    // console.log(posicoes[i])
                     marks(posicoes[i], map)
                 } else {
-                    console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
+                    // console.log(posicoes[i])
+                    // console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
                 }
             }
         })
@@ -170,24 +170,9 @@ async function initMap(dados = "") {
     return distanciaEmKm;
 }
 
-// Coordenadas da referência (-23.5346858,-46.7129314)
-const coordenadaReferencia = { lat: -23.5346858, lon: -46.7129314 };
-
-// Coordenada para verificar
-const coordenadaVerificar = { lat: -23.550520, lon: -46.639297 };
-
-// Calcular a distância entre as coordenadas
-const distancia = calcularDistancia(coordenadaReferencia.lat, coordenadaReferencia.lon, coordenadaVerificar.lat, coordenadaVerificar.lon);
-
-// Verificar se a distância é menor ou igual a 1 km
-if (distancia <= 1) {
-    console.log("A coordenada está dentro do raio de 1 km da coordenada de referência.");
-} else {
-    console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
-}
 // EVENTOS
 
-btnEnviar.addEventListener("click", ()=>{
+btnEnviar.addEventListener("click", async ()=>{
     const buscaLocal = document.querySelector("#busca")
     const raio = document.querySelector("#raio")
     let materiais = []
@@ -197,7 +182,6 @@ btnEnviar.addEventListener("click", ()=>{
             materiais.push(span.innerHTML)
         }
     })
-    console.log(materiais)
     let dados = [buscaLocal.value,raio.value,materiais]
     console.log(dados)
     initMap(dados)
