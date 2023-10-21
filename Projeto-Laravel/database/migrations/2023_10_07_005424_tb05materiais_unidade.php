@@ -13,14 +13,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb05materiais_unidade', function (Blueprint $table) {
-            $table->integer('tb05id')->auto_increment()->unique();
-            $table->integer('tb05id_unidade')->notNullable();
-            $table->integer('tb05id_material')->notNullable();
+            $table->id();
+            $table->unsignedBigInteger('tb05id_unidade');
+            $table->unsignedBigInteger('tb05id_material');
+
+            $table->foreign('tb05id_unidade')->references('id')->on('tb04unidades');
+            $table->foreign('tb05id_material')->references('id')->on('tb03material');
         });
-        Schema::table('tb05materiais_unidade', function (Blueprint $table) {
-            $table->foreign('tb05id_material')->references('tb03id')->on('tb03material');
-            $table->foreign('tb05id_unidade')->references('tb04id')->on('tb04unidades');
-        });
+
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb05materiais_unidades');
+        Schema::dropIfExists('tb05materiais_unidade');
     }
 };

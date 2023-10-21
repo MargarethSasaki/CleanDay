@@ -12,17 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb02endereco', function (Blueprint $table) {
-            $table->integer('tb02id')->auto_increment()->unique();
-            $table->string('tb02regiao', 255)->nullable();
+            $table->id();
+            $table->string('tb02cidade', 255)->nullable();
+            $table->string('tb02estado', 255)->nullable();
             $table->string('tb02bairro', 255)->nullable();
-            $table->string('tb02rua', 255)->nullable();
+            $table->string('tb02logradouro', 255)->nullable();
             $table->integer('tb02numero')->nullable();
-            $table->integer('tb02id_usuario');
-            $table->integer('tb02id_unidade');
-        });
-        Schema::table('tb02endereco', function (Blueprint $table) {
-            $table->foreign('tb02id_unidade')->references('tb04id')->on('tb04unidades');
-            $table->foreign('tb02id_usuario')->references('tb01id')->on('tb01usuarios');
+            $table->double('tb02latitude',10,6)->nullable();
+            $table->double('tb02longitude',10,6)->nullable();
+            $table->unsignedBigInteger('tb02id_usuario')->nullable();
+            $table->unsignedBigInteger('tb02id_unidade')->nullable();
+
+            $table->foreign('tb02id_usuario')->references('id')->on('tb01usuarios');
+            $table->foreign('tb02id_unidade')->references('id')->on('tb04unidades');
         });
 
     }

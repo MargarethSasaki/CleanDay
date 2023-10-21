@@ -20,11 +20,11 @@
             <div class="container-reciclar">
                 <h2>Buscar Local</h2>
                 
-                <input type="text" name="busca" id="busca" class="input-aside" placeholder="Buscar">
+                <input type="text" name="busca" id="busca" class="input-aside" placeholder="Buscar" value="Sao Paulo">
                 
                 <h2>Raio em km</h2>
                 
-                <input type="number" name="raio" id="raio" class="input-aside" placeholder="Raio">
+                <input type="number" name="raio" id="raio" class="input-aside" placeholder="Raio" value="2">
                 
                 <h2>Procurar Material: </h2>
                 

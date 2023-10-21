@@ -45,7 +45,7 @@ async function initMap(dados = "") {
         let posicoes = []
         let centroPos = await getLocal(dados[0])
         centroBusca(map,centroPos,dados[1])
-        fetch("http://127.0.0.1:8000/consulta")
+        fetch("/consulta")
         .then((resposta) => {
             if (!resposta.ok) {
                 throw new Error('Erro na solicitação');
@@ -53,24 +53,25 @@ async function initMap(dados = "") {
             return resposta.json();
         })
         .then((resposta) => {
-            console.log(resposta)
-            // let locais = resposta.locais; // Defina locais dentro deste escopo
-            // locais.map((el) => {
-            //     posicoes.push(el.posicao)
-            // })
-            // // Mapear e geocodificar os locais
-            // for (let i = 0; i < posicoes.length; i++) {
-            //     // Calcular a distância entre as coordenadas
-            //     const distancia = calcularDistancia(etecZonaLeste.lat, etecZonaLeste.lng, posicoes[i].lat, posicoes[i].lng, (dados[1]*1000));
+            console.log(resposta.endereco)
+            let locais = resposta.endereco; // Defina locais dentro deste escopo
+            locais.map((el) => {
+                posicoes.push({'lat':el.tb02latitude,'lng':el.tb02longitude})
+            })
+            // Mapear e geocodificar os locais
+            // console.log(posicoes);
+            for (let i = 0; i < posicoes.length; i++) {
+                // Calcular a distância entre as coordenadas
+                const distancia = calcularDistancia(etecZonaLeste.lat, etecZonaLeste.lng, posicoes[i].lat, posicoes[i].lng, (dados[1]*1000));
 
-            //     // Verificar se a distância é menor ou igual a 1 km
-            //     if (distancia <= 1) {
-            //         console.log(posicoes[i])
-            //         marks(posicoes[i], map)
-            //     } else {
-            //         console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
-            //     }
-            // }
+                // Verificar se a distância é menor ou igual a 1 km
+                if (distancia <= 1) {
+                    console.log(posicoes[i])
+                    marks(posicoes[i], map)
+                } else {
+                    console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
+                }
+            }
         })
         .catch((erro) => {
             console.error("Ocorreu um erro ao buscar e geocodificar os locais: " + erro);
