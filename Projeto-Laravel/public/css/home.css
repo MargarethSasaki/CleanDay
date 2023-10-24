@@ -8,9 +8,24 @@ body, ul {
   
 }
 
+/*estilizando a barra de rolagem*/
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #011E11;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #12FF46;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
 /* Estilizando a navbar */
 .navbar {
-  margin: auto;
+  /* background-color: ;  */
+  /* Cor de fundo da navbar */
   width: 100%
 }
 
@@ -99,7 +114,10 @@ body{
 
 
 .texto {
-  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }
 
 .horizontal-list {
@@ -115,15 +133,12 @@ body{
 }
 
 h1 {
-  height: 80%;
-  width: 40%;
   font-size: 24px; /* Define o tamanho da fonte do título */
   margin-bottom: 10px; /* Adiciona espaçamento inferior ao título */
   font-family: 'DM Sans', sans-serif;
   color: aliceblue;
   font-size: 55px;
-  justify-content: center;
-  margin-left: 40%;
+
 
 }
 
@@ -327,6 +342,6 @@ filter: grayscale(50%); /* Converte a imagem para tons de cinza */
 filter: brightness(150%); /* Aumenta o brilho em 150% */
 
 
-width: 1000%; /* Ajusta a largura da imagem para ocupar toda a largura da div */
+width: 1200%; /* Ajusta a largura da imagem para ocupar toda a largura da div */
 height: 100%; /* A altura ajusta automaticamente para manter a proporção original */
 }

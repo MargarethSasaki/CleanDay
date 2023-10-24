@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb02endereco', function (Blueprint $table) {
             $table->id();
-            $table->string('tb02cidade', 255)->nullable();
+            $table->string('tb02cep', 20)->nullable();
             $table->string('tb02estado', 255)->nullable();
             $table->string('tb02bairro', 255)->nullable();
             $table->string('tb02logradouro', 255)->nullable();

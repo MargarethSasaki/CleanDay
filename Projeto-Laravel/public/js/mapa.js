@@ -45,6 +45,7 @@ async function initMap(dados = "") {
         let posicoes = []
         let centroPos = await getLocal(dados[0])
         centroBusca(map,centroPos,dados[1])
+        map.setCenter(centroPos);
         fetch("/consulta/" + JSON.stringify({materiais}))
         .then((resposta) => {
             if (!resposta.ok) {
@@ -55,18 +56,28 @@ async function initMap(dados = "") {
         .then((resposta) => {
             console.log(resposta)
             let locais = resposta.endereco; // Defina locais dentro deste escopo
+            let unidades = resposta.unidades
             locais.map((el) => {
                 posicoes.push({'lat':el.tb02latitude,'lng':el.tb02longitude})
             })
+            
             // Mapear e geocodificar os locais
-            // console.log(posicoes);
             for (let i = 0; i < posicoes.length; i++) {
                 // Calcular a distância entre as coordenadas
-                const distancia = calcularDistancia(etecZonaLeste.lat, etecZonaLeste.lng, posicoes[i].lat, posicoes[i].lng, dados[1]);
+                const distancia = calcularDistancia(centroPos.lat, centroPos.lng, posicoes[i].lat, posicoes[i].lng, dados[1]);
                 // Verificar se a distância é menor ou igual a 1 km
                 if (distancia <= 1) {
                     // console.log(posicoes[i])
-                    marks(posicoes[i], map)
+                    const infoWindow = new google.maps.InfoWindow({
+                        content:'<div class="container-infowindow">'+
+                                    '<h3>'+ unidades[i].tb04nome +'</h3>'+
+                                    '<p>Horário:'+ unidades[i].tb04horarioFunc +'</p>'+
+                                    '<p>Contato:'+ unidades[i].tb04tel +'</p>'+
+                                    '<p>localização'+  +'</p>'+
+                                    '<p>Coleta:'+  +'</p>'+
+                                '</div>'
+                      });
+                    marks(posicoes[i], map,infoWindow)
                 } else {
                     // console.log(posicoes[i])
                     // console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
@@ -76,22 +87,35 @@ async function initMap(dados = "") {
         .catch((erro) => {
             console.error("Ocorreu um erro ao buscar e geocodificar os locais: " + erro);
         });
+        // map.setCenter = centroPos;
     }
 
 }
-  function marks(coords,map){
+  function marks(coords,map,infoWindow){
     var iconSize = new google.maps.Size(32, 32); // Tamanho desejado do �cone
     var markerIcon = {
         url: "marker.ico",
         scaledSize: iconSize
     };
-    new google.maps.Marker({
+    const marcador = new google.maps.Marker({
         position: coords, // Coordenadas do marcador
         map: map, // Associe o marcador ao mapa
         title: 'Meu Marcador' // Título opcional para o marcador
     });
+    marcador.addListener('click', () =>{
+        infoWindow.open(map, marcador);
+      });
   }
   function centroBusca(map,coord,raio){
+    const testewindow = new google.maps.InfoWindow({
+        content:'<div class="container-infowindow">'+
+                    '<h3>Seu local</h3>'+
+                    '<p>Horário:Seu Horário</p>'+
+                    '<p>Contato:Seu telefone</p>'+
+                    '<p>localização'+  +'</p>'+
+                    '<p>Coleta:'+  +'</p>'+
+                '</div>'
+      });
     const circle = new google.maps.Circle({
         strokeColor:'#fff',
         strokeWeight: 2,
@@ -102,7 +126,8 @@ async function initMap(dados = "") {
         radius:raio *1000,
         map:map
     })
-    marks(coord,map)
+
+    marks(coord,map,testewindow)
   }
   function getLocal (loc){
     return new Promise((resolve, reject) => {
