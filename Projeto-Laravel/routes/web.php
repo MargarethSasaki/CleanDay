@@ -28,7 +28,13 @@ use App\Http\Controller\MapController;
 
 */
 
- 
+Route::get('/materiais', function(){
+    return view('materiais');
+});
+
+Route::get('/sobre', function(){
+    return view('sobre');
+});
 
 Route::get('/', function () {
 

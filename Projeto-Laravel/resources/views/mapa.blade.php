@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Marker</title>
+    <title>Mapa CleanDay</title>
     <script src="/js/mapa.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyA4m1HSu0O0zOuDGMHMHTr6OP5WhHchk&callback=initMap&libraries=&v=weekly&region=BR" defer></script>
@@ -11,6 +11,21 @@
     
   </head>
   <body>
+
+
+ <!--NavBar-->
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/" >CleanDay</a></li>
+            <li><a href="/coleta">Coleta</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/materiais">Materiais</a></li>  
+            
+
+    </nav>
+
+
     <div class="container-dashboard">
         <aside>
             <div class="container-img centralizar">

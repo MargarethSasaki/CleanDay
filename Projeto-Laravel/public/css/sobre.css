@@ -1,0 +1,54 @@
+
+/* Reset de estilos padrão do navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /*estilizando a barra de rolagem*/
+  body::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #011E11;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #12FF46;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+  
+  /* Estilizando a navbar */
+  .navbar {
+    /* background-color: ;  */
+    /* Cor de fundo da navbar */
+    width: 100%
+  }
+  
+  .navbar ul {
+    list-style: none; /* Remover marcadores de lista */
+    display: flex; /* Exibir os itens da lista em linha */
+    justify-content: left; /* Colocar itens na direita  horizontalmente */
+    padding: 1% 0; /* Espaçamento interno superior e inferior */
+    font-family: 'All the Way to the Sun', sans-serif;
+    font-size: 20px;
+    
+                                                
+  }
+  
+  .navbar li {
+    margin: 0 10%; /* Espaçamento horizontal entre os itens da lista */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Remover sublinhado dos links */
+    color: #12FF46; /* Cor do texto dos links */
+    font-weight: bold; /* Estilo de fonte negrito */
+  }
+  
+  body{
+    background-color: #011E11;
+    width:100%
+  }

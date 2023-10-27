@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Tela inicial CleanDay</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,10 +19,11 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="#" >CleanDay</a></li>
+            <li><a href="/" >CleanDay</a></li>
             <li><a href="/coleta">Coleta</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Materiais</a></li>  
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/materiais">Materiais</a></li>  
+            
 
     </nav>
 
@@ -87,7 +88,7 @@
         <div class="card__content">
             <p class="card__title">Eletronicos</p>
             <p class="card__description">Lixo eletrônico, também conhecido como e-lixo ou resíduo eletrônico, refere-se a equipamentos eletrônicos descartados, obsoletos ou danificados, como computadores, celulares, tablets, televisores e outros dispositivos eletrônicos.</p>
-            <button class="card__button">Clique</button>
+            
             
         </div>
     </div>
@@ -98,7 +99,7 @@
     <div class="card__content">
         <p class="card__title">Latinhas</p>
         <p class="card__description">A "latinha" geralmente se refere a uma lata de alumínio, que é uma embalagem comum para bebidas e alimentos.</p>
-        <button class="card__button">Clique</button>
+       
         
     </div>
     </div>
@@ -109,7 +110,7 @@
     <div class="card__content">
         <p class="card__title">Medicamentos</p>
         <p class="card__description">Medicamentos que são considerados "lixos" geralmente se referem a medicamentos vencidos, não utilizados ou que foram descartados de maneira inadequada.</p>
-        <button class="card__button">Clique</button> 
+        
   
     </div>
     </div>
@@ -117,7 +118,7 @@
 
 
 
- <a href="#" > <p class="MaisMat"> Clique aqui para mais materiais </p></a> 
+ <a href="/materiais" > <p class="MaisMat"> Clique aqui para mais materiais </p></a> 
 
 
 
