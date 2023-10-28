@@ -38,7 +38,7 @@ Route::get('/sobre', function(){
 
 Route::get('/', function () {
 
-    return view('welcome');
+    return view('index');
 
 });
 
@@ -53,12 +53,12 @@ Route::get('/consulta/{res}', function ($res) {
     // Primeiro, obtenha o ID do material com base no nome fornecido em $res.
     $materialIDs = DB::table('tb03material')
         ->select('tb03material.id') // Especifique a tabela para evitar ambiguidade
-        ->whereIn('tb03nome', $materiaisJSON->materiais)
+        ->where('tb03nome', $materiaisJSON)
         ->get();
 
     
     
-    // // Em seguida, use o ID do material para obter os resultados desejados da tabela tb05materiais_unidade.
+    // // // Em seguida, use o ID do material para obter os resultados desejados da tabela tb05materiais_unidade.
     $resultados = DB::table('tb05materiais_unidade')
         ->select('tb05materiais_unidade.tb05id_unidade') // Especifique a tabela para evitar ambiguidade
         ->join('tb03material', 'tb05materiais_unidade.tb05id_material', '=', 'tb03material.id')

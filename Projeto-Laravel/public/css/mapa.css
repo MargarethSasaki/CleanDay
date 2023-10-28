@@ -4,8 +4,38 @@
        /* url('caminho-para-o-arquivo-fonte.woff') format('woff'); Formato de fallback para compatibilidade */
   /* Você pode adicionar outras variações da sua fonte aqui, como font-weight e font-style */
 }
+/* Sumir */
+.hide{
+  display:none !important;
+}
+.transicao{
+  opacity: 0;
+  transition: opacity 0.1s  ease-in-out;
+}
+.transicao.visible{
+  opacity: 1;
+}
+/* loader */
+#loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+#loader-container .loader{
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db; /* Cor da borda superior */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
 
-html,
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 .centralizar{
     display: flex;
@@ -19,6 +49,29 @@ html,
     display: flex;
     height: 100%;
 }
+/*infowindows*/
+.container-infowindow{
+  width: 300px;
+}
+
+.container-infowindow h3{
+  text-align: center;
+  color: #2F8240;
+  background-color: #80e293;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container-infowindow div{
+  padding: 10px;
+  background-color: #2F8240;
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+.container-infowindow p{
+  font-size: larger;
+  font-weight: bold;
+}
+
 aside{
     flex: 1;
     padding: 10px;

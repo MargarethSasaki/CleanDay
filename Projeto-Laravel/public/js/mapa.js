@@ -2,32 +2,48 @@
 
 
 const btnEnviar = document.querySelector("#enviarAside")
-const checkboxs = [...document.querySelectorAll("input[type='checkbox']")]
+const radios = [...document.querySelectorAll("input[type='radio']")]
+const loader = document.querySelector("#loader-container")
+const containerMapa = document.getElementById("gmp-map")
 
+
+let materiailBuscado;
 var lat
 var lng 
-// FUN��ES
-// const getLocation = () =>{
-//     if(!navigator.geolocation)
-//     return null
 
-//     navigator.geolocation.getCurrentPosition((pos)=>{
-//         lat = pos.coords.latitude;
-//         lng = pos.coords.longitude;
-//     })
-// }
-// const locs = async () =>{
-    
-// }
+let infoWindowAberto = null;
+// FUN��ES
+
+function autoCompletar(){
+    const autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("busca"), {
+            types: ["geocode","establishment"], // Especifica o tipo de sugestões (geográficas)
+            country: "BR",
+            administrative_area_level_1: "SP" // SP representa São Paulo
+        }
+      );
+
+      // Adicione um ouvinte de evento para quando um local for selecionado
+    autocomplete.addListener("place_changed", function () {
+        const place = autocomplete.getPlace(); // Obtenha informações sobre o local
+        // Faça algo com as informações do local, como exibir no mapa ou em uma lista.
+        console.log(place);
+    });
+}
+
+
 
 async function initMap(dados = "") {
+
+    
+
     const etecZonaLeste = {
       "lat": -23.522975759039916, 
       "lng": -46.475854920081524
     };
     // let raio = 
     // const geocoder = new google.maps.Geocoder()
-    const map = new google.maps.Map(document.getElementById("gmp-map"), {
+    const map = await new google.maps.Map(containerMapa, {
       zoom: 15,
       center: etecZonaLeste,
       fullscreenControl: false,
@@ -35,8 +51,13 @@ async function initMap(dados = "") {
       streetViewControl: false
     });
     // console.log(etecZonaLeste)
+    // Quando o mapa estiver carregado, oculte o carregamento
+  map.addListener("tilesloaded", function () {
+    containerMapa.classList.add("visible");
+    loader.classList.add("hide")
+  });
     
-    
+    autoCompletar()
     
 
     // GEOCODER
@@ -46,7 +67,7 @@ async function initMap(dados = "") {
         let centroPos = await getLocal(dados[0])
         centroBusca(map,centroPos,dados[1])
         map.setCenter(centroPos);
-        fetch("/consulta/" + JSON.stringify({materiais}))
+        fetch("/consulta/" + JSON.stringify(materiais))
         .then((resposta) => {
             if (!resposta.ok) {
                 throw new Error('Erro na solicitação');
@@ -71,10 +92,12 @@ async function initMap(dados = "") {
                     const infoWindow = new google.maps.InfoWindow({
                         content:'<div class="container-infowindow">'+
                                     '<h3>'+ unidades[i].tb04nome +'</h3>'+
-                                    '<p>Horário:'+ unidades[i].tb04horarioFunc +'</p>'+
-                                    '<p>Contato:'+ unidades[i].tb04tel +'</p>'+
-                                    '<p>localização'+  +'</p>'+
-                                    '<p>Coleta:'+  +'</p>'+
+                                    '<div>'+
+                                    '<p>Horário: '+ unidades[i].tb04horarioFunc +'</p>'+
+                                    '<p>Contato: '+ unidades[i].tb04tel +'</p>'+
+                                    '<p>localização: '+ locais[i].tb02logradouro +', '+ locais[i].tb02numero +', '+ locais[i].tb02bairro +'</p>'+
+                                    '<p>Coleta: '+  +'</p>'+
+                                    '</div>'+
                                 '</div>'
                       });
                     marks(posicoes[i], map,infoWindow)
@@ -92,20 +115,35 @@ async function initMap(dados = "") {
 
 }
   function marks(coords,map,infoWindow){
-    var iconSize = new google.maps.Size(32, 32); // Tamanho desejado do �cone
-    var markerIcon = {
-        url: "marker.ico",
-        scaledSize: iconSize
-    };
-    const marcador = new google.maps.Marker({
-        position: coords, // Coordenadas do marcador
-        map: map, // Associe o marcador ao mapa
-        title: 'Meu Marcador' // Título opcional para o marcador
-    });
-    marcador.addListener('click', () =>{
-        infoWindow.open(map, marcador);
-      });
-  }
+
+      
+      var iconSize = new google.maps.Size(32, 32); // Tamanho desejado do �cone
+      var markerIcon = {
+          url: "marker.ico",
+          scaledSize: iconSize
+        };
+        const marcador = new google.maps.Marker({
+            position: coords, // Coordenadas do marcador
+            map: map, // Associe o marcador ao mapa
+            title: 'Meu Marcador' // Título opcional para o marcador
+        });
+        marcador.addListener('click', () =>{
+            infoWindow.open(map, marcador);
+        });
+        marcador.addListener('click', function() {
+            // Fecha o InfoWindow aberto anteriormente, se houver
+            if (infoWindowAberto) {
+              infoWindowAberto.close();
+            }
+
+            // Abre o InfoWindow atual
+            infoWindow.open(map, marcador);
+            
+            // Atualiza a referência para o InfoWindow aberto atualmente
+            infoWindowAberto = infoWindow;
+
+        })
+    }
   function centroBusca(map,coord,raio){
     const testewindow = new google.maps.InfoWindow({
         content:'<div class="container-infowindow">'+
@@ -200,15 +238,17 @@ async function initMap(dados = "") {
 btnEnviar.addEventListener("click", async ()=>{
     const buscaLocal = document.querySelector("#busca")
     const raio = document.querySelector("#raio")
-    let materiais = []
-    checkboxs.map((el)=>{
+
+    radios.map((el)=>{
         let span = el.nextElementSibling
         if(el.checked){
-            materiais.push(span.innerHTML)
+            materiailBuscado = span.innerHTML
         }
     })
-    let dados = [buscaLocal.value,raio.value,materiais]
-    console.log(dados)
+    let dados = [buscaLocal.value,raio.value,materiailBuscado]
+    buscaLocal.value = ''
+    containerMapa.classList.remove("visible")
+    loader.classList.remove("hide")
     initMap(dados)
 })
 

@@ -4,7 +4,7 @@
     <title>Mapa CleanDay</title>
     <script src="/js/mapa.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyA4m1HSu0O0zOuDGMHMHTr6OP5WhHchk&callback=initMap&libraries=&v=weekly&region=BR" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyA4m1HSu0O0zOuDGMHMHTr6OP5WhHchk&callback=initMap&libraries=places&v=weekly&region=BR" defer></script>
     
     <link rel="stylesheet" href="/css/mapa.css">
 
@@ -48,24 +48,32 @@
                 
                 <div class="selecao-materiais">
                     <div class="controller">
-                        <input type="checkbox" name="" id="">
+                        <input type="radio" name="material" id="">
                         <span>Papel</span>
                     </div>
                     <div class="controller">
-                        <input type="checkbox" name="" id="">
+                        <input type="radio" name="material" id="">
                         <span>Metal</span>
                     </div>
                     <div class="controller">
-                        <input type="checkbox" name="" id="">
+                        <input type="radio" name="material" id="">
                         <span>Vidro</span>
                     </div>
                     <div class="controller">
-                        <input type="checkbox" name="" id="">
+                        <input type="radio" name="material" id="">
                         <span>Plástico</span>
                     </div>
                     <div class="controller">
-                        <input type="checkbox" name="" id="">
+                        <input type="radio" name="material" id="">
                         <span>Óleo de cozinha</span>
+                    </div>
+                    <div class="controller">
+                        <input type="radio" name="material" id="">
+                        <span>Eletronicos</span>
+                    </div>
+                    <div class="controller">
+                        <input type="radio" name="material" id="">
+                        <span>Pilhas</span>
                     </div>
                 </div>
             </div>
@@ -77,8 +85,12 @@
             <!-- </form> -->
         </aside>
         <main>
-            <div class="nav"></div>
-            <div id="gmp-map"></div>
+            <!-- Loader -->
+            <div id="loader-container">
+                <div class="loader"></div>
+            </div>
+            <!-- Mapa -->
+            <div id="gmp-map" class="transicao"></div>
         </main>
         
     </div>
