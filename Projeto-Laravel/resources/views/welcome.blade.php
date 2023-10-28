@@ -31,7 +31,7 @@
 
       
 
-        <div><img src="img/arvore2.JPG" alt=""></div>
+        <div><img src="img/arvore2.jpg" alt="" class="arvore"></div>
 
         <div>
           

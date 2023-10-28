@@ -345,3 +345,10 @@ filter: brightness(150%); /* Aumenta o brilho em 150% */
 width: 1200%; /* Ajusta a largura da imagem para ocupar toda a largura da div */
 height: 100%; /* A altura ajusta automaticamente para manter a proporção original */
 }
+
+
+.arvore{
+  width: 160%;
+  height: 160%;
+  
+}

@@ -56,25 +56,21 @@ body, ul {
   
   /*cards*/
 
-  .plasticos{
-    width: 500px;
-    height: 250px;
-  }
   
  
   .carde{
-    float: left;
-    display: flex;;
+    
+    
     margin-left: 7.5%;
     margin-top: 5%;
     position: relative;
-    width: 500px;
-    height: 250px;
+    width: 85%;
+    height: 300px;
     color: #2e2d31;
-    background: #35911c;
+    background: #6da15f;
     overflow: hidden;
     border-radius: 20px;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
   } 
 
   
@@ -84,6 +80,7 @@ body, ul {
     font-size: 26px;
     padding: 6px 12px;
     color: #f8f8f8;
+   
   }
   
   .carde_title {
@@ -96,12 +93,13 @@ body, ul {
     bottom: 0;
       /* edit the width to fit card */
     width: 100%;
-    padding: 20px;
+    padding: -1px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
       /* edit here to change the height of the content box */
     transform: translateY(150px);
-    transition: transform .25s;
+    transition: transform .25s; 
+    text-align: center;
   }
   
   .carde_content::before {
@@ -131,7 +129,8 @@ body, ul {
     font-size: 17px;
     opacity: 0;
     transition: opacity .5s;
-    text-align: left;
+    text-align: center;
+
   }
   
   .carde:hover .carde_content {
@@ -145,20 +144,143 @@ body, ul {
 
 
   .materiais2{
-    margin-top: 45%;
-    padding: 10%;
-    width: 100%;
-    height: 100%;
-    background-color: #f8f8f8;
+    
+    padding: 2%;
+    width: 100;
+    height: 885px;
+    background-color: #6da15f;
   }
   
   
+
+  .card  {
+    width: 200px;
+    height: 350px;
+    background-image: linear-gradient(163deg, #00ffaa 0%, #5eff00 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    display: flex;
+    float: left;
+    margin-left: 7.5% ;
+    margin-top: 3%;
+    text-align: center;
+    color: white;
+    box-shadow: 3px 3px 20px 2px #2e2d31;
+    
+   }
+
+
+   h1{
+    color: #90e4ac;
+   }
+   
+   .card2 {
+    width: 200px;
+    height: 350px;
+    background-color: #011E11;
+    border-radius: 15px;
+    
+   
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }
+  
+
+   
+  .cardz  {
+    width: 200px;
+    height: 350px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3cff00 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    display: flex;
+    float: left;
+    margin-left: 7.5% ;
+    margin-top: 3%;
+    margin-bottom: 2.5%;
+    text-align: center;
+    color: white;
+    box-shadow: 3px 3px 20px 2px #2e2d31;
+   }
+
+.par{
+  margin-bottom: 45%;
+}
+   
+   .cardz:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.3);
+   }
   
   
-  
-  
-  
-  
+   .button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
+    margin-bottom: 2%;
+    
+   }
+   
+   .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+   }
+   
+   .button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   
+   .button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
   
   
   
