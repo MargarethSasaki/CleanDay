@@ -6,6 +6,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyA4m1HSu0O0zOuDGMHMHTr6OP5WhHchk&callback=initMap&libraries=places&v=weekly&region=BR" defer></script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/mapa.css">
 
     
@@ -21,7 +22,7 @@
             <li><a href="/coleta">Coleta</a></li>
             <li><a href="/sobre">Sobre</a></li>
             <li><a href="/materiais">Materiais</a></li>  
-            
+        </ul>
 
     </nav>
 

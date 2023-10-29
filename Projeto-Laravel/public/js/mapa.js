@@ -5,14 +5,21 @@ const btnEnviar = document.querySelector("#enviarAside")
 const radios = [...document.querySelectorAll("input[type='radio']")]
 const loader = document.querySelector("#loader-container")
 const containerMapa = document.getElementById("gmp-map")
+const body = document.querySelector("body")
 
+// var alturaDaTela = window.innerHeight;
+// console.log(alturaDaTela);
+// body.style.height = alturaDaTela+"px";
 
 let materiailBuscado;
 var lat
 var lng 
-
+var pesq;
 let infoWindowAberto = null;
 // FUN��ES
+
+
+
 
 function autoCompletar(){
     const autocomplete = new google.maps.places.Autocomplete(
@@ -65,7 +72,8 @@ async function initMap(dados = "") {
         let materiais = dados[2]
         let posicoes = []
         let centroPos = await getLocal(dados[0])
-        centroBusca(map,centroPos,dados[1])
+        pesq = 1;
+        centroBusca(map,centroPos,dados[1],dados[0])
         map.setCenter(centroPos);
         fetch("/consulta/" + JSON.stringify(materiais))
         .then((resposta) => {
@@ -89,18 +97,23 @@ async function initMap(dados = "") {
                 // Verificar se a distância é menor ou igual a 1 km
                 if (distancia <= 1) {
                     // console.log(posicoes[i])
+                    let numeroDoLocal = locais[i].tb02numero == '0'? 's/n' : locais[i].tb02numero;
+                    const enderecoDeDestino = locais[i].tb02logradouro + ',' +  numeroDoLocal + ' - ' + locais[i].tb02bairro + locais[i].tb02cidade + ' - ' + locais[i].tb02estado + ',CEP: ' + locais[i].tb02cep 
                     const infoWindow = new google.maps.InfoWindow({
                         content:'<div class="container-infowindow">'+
                                     '<h3>'+ unidades[i].tb04nome +'</h3>'+
                                     '<div>'+
                                     '<p>Horário: '+ unidades[i].tb04horarioFunc +'</p>'+
                                     '<p>Contato: '+ unidades[i].tb04tel +'</p>'+
-                                    '<p>localização: '+ locais[i].tb02logradouro +', '+ locais[i].tb02numero +', '+ locais[i].tb02bairro +'</p>'+
+                                    '<p>localização: '+ enderecoDeDestino +'</p>'+
                                     '<p>Coleta: '+  +'</p>'+
+                                    '<p><a href="https://www.google.com.br/maps/dir/'+ dados[0] +', Brasil /' + enderecoDeDestino + '">'+
+                                    '<span>Veja como chegar lá </span><i class="fa fa-road"></i>'+
+                                    '</a></p>'+
                                     '</div>'+
                                 '</div>'
                       });
-                    marks(posicoes[i], map,infoWindow)
+                    marks(posicoes[i], map,infoWindow,unidades[i].tb04nome,0)
                 } else {
                     // console.log(posicoes[i])
                     // console.log("A coordenada está fora do raio de 1 km da coordenada de referência.");
@@ -114,18 +127,25 @@ async function initMap(dados = "") {
     }
 
 }
-  function marks(coords,map,infoWindow){
-
-      
-      var iconSize = new google.maps.Size(32, 32); // Tamanho desejado do �cone
-      var markerIcon = {
-          url: "marker.ico",
+  function marks(coords,map,infoWindow,nome,pesq){
+        // iconCustomizado = new google.maps.Icon()
+        var ico;
+        if( pesq == 1){
+            ico = "img/marcadorCentro.png";
+        }else{
+            ico = "img/marcadorUnidade.png";
+        }
+        console.log(pesq);
+        var iconSize = new google.maps.Size(50, 50); // Tamanho desejado do �cone
+        var markerIcon = {
+          url: ico,
           scaledSize: iconSize
         };
         const marcador = new google.maps.Marker({
             position: coords, // Coordenadas do marcador
             map: map, // Associe o marcador ao mapa
-            title: 'Meu Marcador' // Título opcional para o marcador
+            title: nome, // Título opcional para o marcador
+            icon:markerIcon
         });
         marcador.addListener('click', () =>{
             infoWindow.open(map, marcador);
@@ -165,7 +185,7 @@ async function initMap(dados = "") {
         map:map
     })
 
-    marks(coord,map,testewindow)
+    marks(coord,map,testewindow,'Sua localização',1)
   }
   function getLocal (loc){
     return new Promise((resolve, reject) => {

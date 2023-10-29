@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tela inicial CleanDay</title>
+        <title>CleanDay - Tela inicial</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,8 +23,7 @@
             <li><a href="/coleta">Coleta</a></li>
             <li><a href="/sobre">Sobre</a></li>
             <li><a href="/materiais">Materiais</a></li>  
-            
-
+        </ul>
     </nav>
 
     <div class="texto">

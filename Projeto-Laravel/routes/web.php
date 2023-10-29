@@ -37,8 +37,7 @@ Route::get('/sobre', function(){
 });
 
 Route::get('/', function () {
-
-    return view('index');
+    return view('welcome');
 
 });
 
