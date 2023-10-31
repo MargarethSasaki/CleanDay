@@ -33,11 +33,15 @@
 
   <div class="noticias">
     <article class="carde">
+ <div class="temporaryy_text">
+        Como a produção de lixo pode afetar o meio ambiente e nosssas vidas?? Aqui estão algumas matérias sobre o tema:
+      </div>
 
 
-
-      <div class="carde_content">
+      <div class="carde_content"> 
+       
         <span class="carde_title">Tudo sobre reciclagem</span>
+       
         <span class="carde_subtitle">https://www.cnnbrasil.com.br/tudo-sobre/reciclagem/</span>
         <p class="carde_description">A CNN Brasil produziu uma matéria que fala justamente sobre como a tecnologia vem mudando a maneira como reciclamos.</p>
         <button class="button"> <a href="https://www.cnnbrasil.com.br/tudo-sobre/reciclagem/" src=""> Clique</a></button>
@@ -69,7 +73,7 @@
       <div class="card2">
         <h1>Plástico</h1>
         <p class="par">O plástico é o principal causador do acúmolo de lixo no mundo.</p>
-        <button class="button cards-Materiais" id="plastico"> Clique
+        <button class="button cards-Materiais" id="Plastico"> Clique
         </button>
       </div>
     </div>
@@ -79,7 +83,7 @@
       <div class="card2">
         <h1>Papel</h1>
         <p class="par">Reciclar papel ajuda a preservar florestas e economizar recursos naturais.</p>
-        <button class="button cards-Materiais" id="papel"> Clique
+        <button class="button cards-Materiais" id="Papel"> Clique
         </button>
       </div>
     </div>
@@ -89,7 +93,7 @@
       <div class="card2">
         <h1>Vidro</h1>
         <p class="par">Reciclar vidro economiza recursos e diminui a poluição do solo e da água.</p>
-        <button class="button cards-Materiais" id="vidro"> Clique
+        <button class="button cards-Materiais" id="Vidro"> Clique
         </button>
       </div>
     </div>
@@ -98,7 +102,7 @@
       <div class="card2">
         <h1>Lixo Hospitalar</h1>
         <p class="par">O descarte adequado de resíduos hospitalares é importante.</p>
-        <button class="button cards-Materiais" id="lixo hospitalar"> Clique
+        <button class="button cards-Materiais" id="Lixo hospitalar"> Clique
         </button>
       </div>
     </div>
@@ -107,7 +111,7 @@
       <div class="card2">
         <h1>Óleo de Cozinha</h1>
         <p class="par">Reciclar óleo de cozinha evita a contaminação do meio ambiente.</p>
-        <button class="button cards-Materiais" id="oleo de cozinha"> Clique
+        <button class="button cards-Materiais" id="Oleo de cozinha"> Clique
         </button>
       </div>
     </div>
@@ -118,7 +122,7 @@
       <div class="card2">
         <h1>Tecidos</h1>
         <p class="par">Reciclar tecidos reduz o desperdício têxtil e a pressão sobre os recursos naturais.</p>
-        <button class="button cards-Materiais" id="tecidos"> Clique
+        <button class="button cards-Materiais" id="Tecidos"> Clique
         </button>
       </div>
     </div>
@@ -127,7 +131,7 @@
       <div class="card2">
         <h1>Pilhas</h1>
         <p class="par">Reciclar pilhas evita a liberação de substâncias tóxicas no ambiente.</p>
-        <button class="button cards-Materiais" id="pilhas"> Clique
+        <button class="button cards-Materiais" id="Pilhas"> Clique
         </button>
       </div>
     </div>
@@ -136,7 +140,7 @@
       <div class="card2">
         <h1>Madeira</h1>
         <p class="par">Reciclar madeira contribui para a gestão sustentável de florestas e reduz o desperdício.</p>
-        <button class="button cards-Materiais" id="madeira">Clique
+        <button class="button cards-Materiais" id="Madeira">Clique
         </button>
       </div>
     </div>
@@ -145,7 +149,7 @@
       <div class="card2">
         <h1>Sucatas</h1>
         <p class="par">A reciclagem de sucatas contribui para a economia de recursos e a redução do impacto ambiental.</p>
-        <button class="button cards-Materiais" id="sucatas"> Clique
+        <button class="button cards-Materiais" id="Sucatas"> Clique
         </button>
       </div>
     </div>
@@ -154,7 +158,7 @@
       <div class="card2">
         <h1>Eletrônicos</h1>
         <p class="par">A reciclagem de eletrônicos ajuda a recuperar materiais valiosos e reduzir o descarte inadequado.</p>
-        <button class="button cards-Materiais" id="eletronicos">Clique
+        <button class="button cards-Materiais" id="Eletronicos">Clique
         </button>
       </div>
     </div>
@@ -173,4 +177,10 @@
 
 
   </div>
+
+<footer>
+<h1 > &copy;CleanDay</h1>
+</footer>
+
+
  </body>
