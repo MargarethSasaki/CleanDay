@@ -6,6 +6,7 @@ const radios = [...document.querySelectorAll("input[type='radio']")]
 const loader = document.querySelector("#loader-container")
 const containerMapa = document.getElementById("gmp-map")
 const body = document.querySelector("body")
+const boxraio = document.querySelectorAll(".container-raio")
 
 // var alturaDaTela = window.innerHeight;
 // console.log(alturaDaTela);
@@ -16,8 +17,7 @@ var lat
 var lng 
 var pesq;
 let infoWindowAberto = null;
-// FUN��ES
-
+// FUNÇÕES
 
 
 
@@ -34,7 +34,7 @@ function autoCompletar(){
     autocomplete.addListener("place_changed", function () {
         const place = autocomplete.getPlace(); // Obtenha informações sobre o local
         // Faça algo com as informações do local, como exibir no mapa ou em uma lista.
-        console.log(place);
+        // console.log(place);
     });
 }
 
@@ -106,7 +106,7 @@ async function initMap(dados = "") {
                                     '<p>Horário: '+ unidades[i].tb04horarioFunc +'</p>'+
                                     '<p>Contato: '+ unidades[i].tb04tel +'</p>'+
                                     '<p>localização: '+ enderecoDeDestino +'</p>'+
-                                    '<p>Coleta: '+  +'</p>'+
+                                    '<p>Coleta: '+ materiais +'</p>'+
                                     '<p><a href="https://www.google.com.br/maps/dir/'+ dados[0] +', Brasil /' + enderecoDeDestino + '">'+
                                     '<span>Veja como chegar lá </span><i class="fa fa-road"></i>'+
                                     '</a></p>'+
@@ -167,11 +167,7 @@ async function initMap(dados = "") {
   function centroBusca(map,coord,raio){
     const testewindow = new google.maps.InfoWindow({
         content:'<div class="container-infowindow">'+
-                    '<h3>Seu local</h3>'+
-                    '<p>Horário:Seu Horário</p>'+
-                    '<p>Contato:Seu telefone</p>'+
-                    '<p>localização'+  +'</p>'+
-                    '<p>Coleta:'+  +'</p>'+
+                    '<h3>'+  +'</h3>'+
                 '</div>'
       });
     const circle = new google.maps.Circle({
@@ -260,18 +256,22 @@ btnEnviar.addEventListener("click", async ()=>{
     const raio = document.querySelector("#raio")
 
     radios.map((el)=>{
-        let span = el.nextElementSibling
+        let label = el.nextElementSibling
         if(el.checked){
-            materiailBuscado = span.innerHTML
+            materiailBuscado = label.innerHTML
         }
     })
-    let dados = [buscaLocal.value,raio.value,materiailBuscado]
+    let dados = [buscaLocal.value,raio.innerHTML,materiailBuscado]
     buscaLocal.value = ''
     containerMapa.classList.remove("visible")
     loader.classList.remove("hide")
     initMap(dados)
 })
 
-
+boxraio.map((el)=>{
+    el.addEventListener("click",()=>{
+        
+    })
+})
 
 

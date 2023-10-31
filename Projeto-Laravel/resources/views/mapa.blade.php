@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mapa CleanDay</title>
+    <title>Mapa - CleanDay</title>
     <script src="/js/mapa.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyA4m1HSu0O0zOuDGMHMHTr6OP5WhHchk&callback=initMap&libraries=places&v=weekly&region=BR" defer></script>
     
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/mapa.css">
 
@@ -23,7 +24,6 @@
             <li><a href="/sobre">Sobre</a></li>
             <li><a href="/materiais">Materiais</a></li>  
         </ul>
-
     </nav>
 
 
@@ -40,41 +40,51 @@
                 
                 <h2>Raio em km</h2>
                 
-                <input type="number" name="raio" id="raio" class="input-aside" placeholder="Raio" value="2">
+                <div class="controller container-raio">
+                    <button id="-">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="box-raio" id="raio">2</div>
+
+                    <button id="+">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
                 
-                <h2>Procurar Material: </h2>
+                <!-- <h2>Procurar Material: </h2>
                 
                 <input type="text" name="buscarMaterial" id="buscarMaterial" class="input-aside" placeholder="Material">
-                
+                 -->
                 
                 <div class="selecao-materiais">
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Papel</span>
+                        <input type="radio" name="material" id="papel">
+                        <label for="papel">Papel</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Metal</span>
+                        <input type="radio" name="material" id="metal">
+                        <label for="metal">Metal</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Vidro</span>
+                        <input type="radio" name="material" id="vidro">
+                        <label for="vidro">Vidro</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Plástico</span>
+                        <input type="radio" name="material" id="plastico">
+                        <label for="plastico">Plástico</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Óleo de cozinha</span>
+                        <input type="radio" name="material" id="oleo de cozinha">
+                        <label for="oleo de cozinha">Óleo de cozinha</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Eletronicos</span>
+                        <input type="radio" name="material" id="eletronicos">
+                        <label for="eletronicos">Eletronicos</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="">
-                        <span>Pilhas</span>
+                        <input type="radio" name="material" id="pilhas">
+                        <label for="pilhas">Pilhas</label>
                     </div>
                 </div>
             </div>
