@@ -120,13 +120,18 @@ aside::-webkit-scrollbar-thumb{
     border: none;
     border-radius: 5px;
 }
-
+#busca{
+  padding: 5px;
+  font-size: small;
+  font-weight: bold;
+}
 .controller button{
   background-color: #054712;
   border: 2px solid #fff;
   border-radius: 10px;
   outline: none;
   padding: 5px;
+  width: 2rem;
   margin: 0 10px;
   font-weight: bold;
   cursor: pointer;
@@ -135,6 +140,9 @@ aside::-webkit-scrollbar-thumb{
   color: #fff;
 }
 .box-raio{
+  max-width: 50px;
+  min-width: 20px;
+  text-align: center;
   padding: 5px 20px;
   background-color: #80e293;
   color: #054712;
@@ -206,7 +214,7 @@ body, ul {
   
   /*estilizando a barra de rolagem*/
   body::-webkit-scrollbar {
-    width: 8px;               /* width of the entire scrollbar */
+    width: 5px;               /* width of the entire scrollbar */
   }
   
   body::-webkit-scrollbar-track {
@@ -231,9 +239,7 @@ body, ul {
     justify-content: left; /* Colocar itens na direita  horizontalmente */
     padding: 1% 0; /* Espaçamento interno superior e inferior */
     font-family: 'All the Way to the Sun', sans-serif;
-    font-size: 20px;
-    
-                                                
+    font-size: 20px;           
   }
   
   .navbar li {

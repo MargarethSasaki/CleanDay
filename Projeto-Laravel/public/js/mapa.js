@@ -6,8 +6,8 @@ const radios = [...document.querySelectorAll("input[type='radio']")]
 const loader = document.querySelector("#loader-container")
 const containerMapa = document.getElementById("gmp-map")
 const body = document.querySelector("body")
-const boxraio = document.querySelectorAll(".container-raio")
-
+const boxraio = [...document.querySelectorAll(".container-raio button")]
+let numeroRaio = 0;
 // var alturaDaTela = window.innerHeight;
 // console.log(alturaDaTela);
 // body.style.height = alturaDaTela+"px";
@@ -135,7 +135,7 @@ async function initMap(dados = "") {
         }else{
             ico = "img/marcadorUnidade.png";
         }
-        console.log(pesq);
+
         var iconSize = new google.maps.Size(50, 50); // Tamanho desejado do �cone
         var markerIcon = {
           url: ico,
@@ -270,7 +270,24 @@ btnEnviar.addEventListener("click", async ()=>{
 
 boxraio.map((el)=>{
     el.addEventListener("click",()=>{
-        
+        let raio = document.querySelector("#raio")
+        if(el.id == '+' && numeroRaio < 51){
+            numeroRaio += 1;
+            raio.innerHTML = numeroRaio;
+        }else if(el.id == '-' && numeroRaio > 1){
+            numeroRaio -= 1;
+            raio.innerHTML = numeroRaio;
+        }
+    })
+    el.addEventListener("mousedown",()=>{
+        let raio = document.querySelector("#raio")
+        if(el.id == '+' && numeroRaio < 51){
+            numeroRaio += 1;
+            raio.innerHTML = numeroRaio;
+        }else if(el.id == '-' && numeroRaio > 1){
+            numeroRaio -= 1;
+            raio.innerHTML = numeroRaio;
+        }
     })
 })
 

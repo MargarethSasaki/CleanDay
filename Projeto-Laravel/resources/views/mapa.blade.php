@@ -45,15 +45,15 @@
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
 
-                    <div class="box-raio" id="raio">2</div>
+                    <div class="box-raio" id="raio">1</div>
 
                     <button id="+">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
                 
-                <!-- <h2>Procurar Material: </h2>
-                
+                 <h2>Procurar Material: </h2>
+                <!--
                 <input type="text" name="buscarMaterial" id="buscarMaterial" class="input-aside" placeholder="Material">
                  -->
                 
