@@ -114,13 +114,19 @@
     </div>
     </div>
 </div>
-
-
-
  <a href="/materiais" > <p class="MaisMat"> Clique aqui para mais materiais </p></a> 
 
 
 
 
-    </body>
+ 
+</body>
+
+
+    <footer>
+    <p> &copy;CleanDay</p>
+    </footer>
+
+
+
 </html>
