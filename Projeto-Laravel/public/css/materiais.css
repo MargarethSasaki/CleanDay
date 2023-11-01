@@ -1,56 +1,41 @@
-
 /* Reset de estilos padrão do navegador */
 body, ul {
-    margin: 0;
-    padding: 0;
-    
-  }
+  margin: 0;
+  padding: 0;
   
-  /*estilizando a barra de rolagem*/
-  body::-webkit-scrollbar {
-    width: 8px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #011E11;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: #12FF46;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  }
-  
-  /* Estilizando a navbar */
-  .navbar {
-    /* background-color: ;  */
-    /* Cor de fundo da navbar */
-    width: 100%
-  }
-  
-  .navbar ul {
-    list-style: none; /* Remover marcadores de lista */
-    display: flex; /* Exibir os itens da lista em linha */
-    justify-content: left; /* Colocar itens na direita  horizontalmente */
-    padding: 1% 0; /* Espaçamento interno superior e inferior */
-    font-family: 'All the Way to the Sun', sans-serif;
-    font-size: 20px;
-  }
-  
-  .navbar li {
-    margin: 0 10%; /* Espaçamento horizontal entre os itens da lista */
-  }
-  
-  .navbar a {
-    text-decoration: none; /* Remover sublinhado dos links */
-    color: #12FF46; /* Cor do texto dos links */
-    font-weight: bold; /* Estilo de fonte negrito */
-  }
-  
-  body{
-    background-color: #011E11;
-    width:100%
-  }
-  
+}
+ .fundo-verde{
+  background-color: #cdeac5;
+ }
+
+
+header {
+  background-color: rgb(84, 184, 156);
+  font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+
+}
+
+
+main {
+  background-color: rgb(232, 252, 207);
+}
+*estilizando a barra de rolagem*/
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #011E11;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #12FF46;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
   
   /*cards*/
 
@@ -81,8 +66,12 @@ body, ul {
    
   }
   
-  .carde_title {
+  .card_title {
     font-weight: bold;
+  }
+  .carde_title{
+    font-weight: bold;
+    
   }
   
   .carde_content {
@@ -113,6 +102,10 @@ body, ul {
   }
   
   .carde_title {
+    color: #109638;
+    line-height: 15px;
+  }
+  .card_title {
     color: #109638;
     line-height: 15px;
   }
@@ -175,10 +168,11 @@ body, ul {
    .card2 {
     width: 200px;
     height: 350px;
-    background-color: #011E11;
-    border-radius: 15px;
-    padding: 0 10px;
+    background-color: #132e20;
+    border-radius: 5px;
+    padding: 0 3px;
     transition: all .2s;
+    color: #f8f8f8;
    }
    
    .card2:hover {
@@ -226,7 +220,7 @@ body, ul {
     position: relative;
     overflow: hidden;
     font-size: 19px;
-    color: black;
+    color: rgb(3, 52, 36);
     z-index: 1;
     margin-bottom: 2%;
     
@@ -278,6 +272,7 @@ body, ul {
     background-color: #39bda7;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
    }
+
   
   
   /*popup*/

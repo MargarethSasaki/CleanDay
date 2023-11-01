@@ -165,7 +165,7 @@
       <div class="botaomaterial d-flex justify-content-center">
         <button type="button" class="btn btn-light btn-lg">
            <a href="/login">Clique aqui para mais materiais</a>
-          </button
+</button>
         </div>
 
 </main>   

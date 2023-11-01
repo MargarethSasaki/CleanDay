@@ -1,61 +1,43 @@
-
 /* Reset de estilos padrão do navegador */
 body, ul {
-    margin: 0;
-    padding: 0;
-    
-  }
+  margin: 0;
+  padding: 0;
   
-  /*estilizando a barra de rolagem*/
-  body::-webkit-scrollbar {
-    width: 8px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #011E11;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: #12FF46;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  }
-  
-  /* Estilizando a navbar */
-  .navbar {
-    /* background-color: ;  */
-    /* Cor de fundo da navbar */
-    width: 100%
-  }
-  
-  .navbar ul {
-    list-style: none; /* Remover marcadores de lista */
-    display: flex; /* Exibir os itens da lista em linha */
-    justify-content: left; /* Colocar itens na direita  horizontalmente */
-    padding: 1% 0; /* Espaçamento interno superior e inferior */
-    font-family: 'All the Way to the Sun', sans-serif;
-    font-size: 20px;
-    
-                                                
-  }
-  
-  .navbar li {
-    margin: 0 10%; /* Espaçamento horizontal entre os itens da lista */
-  }
-  
-  .navbar a {
-    text-decoration: none; /* Remover sublinhado dos links */
-    color: #12FF46; /* Cor do texto dos links */
-    font-weight: bold; /* Estilo de fonte negrito */
-  }
-  
-  body{
-    background-color: #011E11;
-    width:100%
-  }
+}
+
+header {
+  background-color: rgb(84, 184, 156);
+  font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+
+}
+
+
+main {
+  background-color: rgb(232, 252, 207);
+}
+*estilizando a barra de rolagem*/
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #011E11;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #12FF46;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+
+ 
 
   h1{
-    margin-top: 3%;
-    color: aliceblue;
+    margin-top: 5%;
+    color: rgb(178, 244, 200);
     font-size: 200%;
     text-align: center;
     font-family: 'DM Sans', sans-serif;
@@ -63,6 +45,7 @@ body, ul {
   }
 
   h2{
+    
     color:  #12FF46;
     font-size: 150%;
     text-align: justify;
@@ -72,7 +55,7 @@ body, ul {
   }
 
   p{
-    color: aliceblue;
+    color: rgb(7, 62, 25);
     font-size: 100%;
     text-align: justify;
     font-family: 'DM Sans', sans-serif;
@@ -83,7 +66,7 @@ body, ul {
   li{
     font-family: 'DM Sans', sans-serif;
     margin-left: 9%;
-    color: aliceblue;
+    color: rgb(7, 62, 25);
     text-align: justify;
     font-size: 100%;
     margin-right: 5%;
@@ -91,29 +74,8 @@ body, ul {
 
   .titulo{
     font-size: 120%;
-    color: #f8f8f8;
+    color: rgb(7, 62, 25);
     font-family:'DM Sans', sans-serif; 
   }
 
-  img{
-    width: 15%;
-    height: 15%;
-    
-  }
-
-  footer{
-    display: flex;
-    justify-content: space-around;
-    border-top: 2px solid #3ce612;
-    padding: 5px;
-  }
-  .icones-container{
-    display: flex;
-    align-items: center;
-  }
-
-  .icones-container i{
-    font-size: larger;
-    margin: 0 3px;
-    color: #e2e4e2;
-  }
+ 

@@ -3,6 +3,8 @@ body, ul {
   margin: 0;
   padding: 0;
   
+
+  
 }
 
 header {
@@ -11,9 +13,7 @@ header {
   font-weight: bold;
 }
 
-.logo{
 
-}
 
 main {
   background-color: rgb(232, 252, 207);
@@ -34,8 +34,8 @@ body::-webkit-scrollbar-thumb {
 
 /* Estilizando a navbar */
 .navbar {
-  /* background-color: ;  */
-  /* Cor de fundo da navbar */
+  background-color: rgb(82, 182, 154);
+  
   width: 100%
 }
 

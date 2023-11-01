@@ -9,31 +9,47 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-<<<<<<< HEAD
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-=======
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
->>>>>>> dfc903a76310af358090ad2bee36b8b7cb368731
         <!-- Styles -->
         <link rel="stylesheet" href="/css/sobre.css">
-    </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      </head>
+
+
     <body>
 
-   <!--NavBar-->
+    <!--NavBar inicio-->
+    <div class ="header">
+  <header class="p-3">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items- mb-2 mb-lg-0 text-white text-decoration-none ">
+        <img src="img/logo.png" class="d-block w-100" height="50" width="50" alt="arvore1">
+        </a>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="/" >CleanDay</a></li>
-            <li><a href="/coleta">Coleta</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/materiais">Materiais</a></li> 
-    </nav>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
+          <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
+          <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
+          <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
+        </ul>
+        <div class="text-end">
+          <button type="button" class="btn btn-light me-2">
+            <a href="/login">Login</a></button>
+          <button type="button" class="btn btn-light">
+          <a href="/register">Cadastro</a></button>
+        </div>
+      </div>
+    </div>
+  </header>
+ <div>
+    <!--NavBar final-->
 
   
 
     
 
-    <h1>Bem-vindo à nossa página "Sobre"!</h1>
+    <h1>Bem-vindo à nossa página Sobre!</h1>
     <p>Somos um grupo de alunos dedicados do curso de Tecnologia da Informação da ETEC Zona Leste, e estamos entusiasmados em apresentar a você o nosso projeto de coleta seletiva. Nosso objetivo é combinar a tecnologia com o compromisso ambiental, tornando mais fácil para você encontrar os locais de coleta seletiva mais próximos.</p>
 
     <h2>A Nossa História</h2>
@@ -57,22 +73,11 @@
     <h1>VIDEO</h1>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
 </body>
-
-
-<footer>
-    <h1 class="titulo"> &copy;CleanDay</h1>
-
-    <div class="icones-container">
-        <div class="icones">
-           <a href="https://github.com/MargarethSasaki/CleanDay.git"> <i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <i class="fa-brands fa-whatsapp"><a href=""></a></i>
-            <i class="fa-brands fa-youtube"><a href=""></a></i>
-        </div>
-        
-    </div>
-</footer>
-
 
 </html>
