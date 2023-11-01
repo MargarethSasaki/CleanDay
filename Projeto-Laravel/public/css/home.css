@@ -1,6 +1,3 @@
-
-
-
 /* Reset de estilos padrão do navegador */
 body, ul {
   margin: 0;
@@ -8,7 +5,20 @@ body, ul {
   
 }
 
-/*estilizando a barra de rolagem*/
+header {
+  background-color: rgb(82, 182, 154);
+  font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
+  font-weight: bold;
+}
+
+.logo{
+
+}
+
+main {
+  background-color: rgb(232, 252, 207);
+}
+*estilizando a barra de rolagem*/
 body::-webkit-scrollbar {
   width: 8px;               /* width of the entire scrollbar */
 }
@@ -29,326 +39,21 @@ body::-webkit-scrollbar-thumb {
   width: 100%
 }
 
-.navbar ul {
-  list-style: none; /* Remover marcadores de lista */
-  display: flex; /* Exibir os itens da lista em linha */
-  justify-content: left; /* Colocar itens na direita  horizontalmente */
-  padding: 1% 0; /* Espaçamento interno superior e inferior */
-  font-family: 'All the Way to the Sun', sans-serif;
-  font-size: 20px;
-  
-                                              
-}
-
-.navbar li {
-  margin: 0 10%; /* Espaçamento horizontal entre os itens da lista */
-}
-
-.navbar a {
-  text-decoration: none; /* Remover sublinhado dos links */
-  color: #12FF46; /* Cor do texto dos links */
-  font-weight: bold; /* Estilo de fonte negrito */
-}
-
-body{
-  background-color: #011E11;
-  width:100%
-}
-
-
-
-
-/* Estilos para o botão */
-.Btn {
-  margin-right: 100%;
-  margin-left: 50%;
-  width: 38%; /* Largura do botão */
-  height: 60px; /* Altura do botão */
-  border-radius: 40px; /* Raio da borda para criar uma forma arredondada */
-  border: none; /* Remove a borda do botão */
-  display: flex; /* Exibe os elementos filhos em linha */
-  align-items: center; /* Alinha os elementos verticalmente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  color: black; /* Cor do texto */
-  background-color: transparent; /* Cor de fundo transparente */
-  cursor: pointer; /* Altera o cursor para indicar interatividade */
-  position: relative; /* Define a posição como relativa para posicionar elementos internos */
-  background: #12FF46; /* Gradiente de fundo */
-  transition-duration: .3s; /* Duração da transição para animações */
-  letter-spacing: 1.2px; /* Espaçamento entre caracteres do texto */
-  font-size: 18px;
-  font-family: 'All the Way to the Sun', sans-serif;
-  text-decoration: underline;
-  justify-content: center;
-  position: absolute;
-  position: relative;
-  margin-top: 3%;                                                 
-}
-
-
-/* Estilos para a animação quando o botão está em foco */
-.Btn:hover {
-  transform: scale(0.95); /* Reduz ligeiramente o tamanho do botão */
-  transition-duration: .3s; /* Duração da transição para animação */
-}
-
-/* Pseudo-elemento ::before para criar uma borda inferior animada */
-.Btn::before {
-  content: ""; /* Adiciona conteúdo antes do botão */
-  position: absolute; /* Define a posição como absoluta para posicionar o elemento */
-  width: 80%; /* Largura do elemento pseudo */
-  height: 30%; /* Altura do elemento pseudo */
-  background: #12FF46; /* Gradiente de fundo */
-  filter: blur(10px); /* Aplica um desfoque ao elemento */
-  bottom: -3px; /* Desloca o elemento para baixo */
-  z-index: -1; /* Coloca o elemento atrás do botão */
-  transition-duration: .3s; /* Duração da transição para animação */
-}
-
-/* Estilos para a animação quando o botão está em foco */
-.Btn:hover::before {
-  bottom: -1px; /* Desloca ligeiramente o elemento para cima */
-  filter: blur(5px); /* Reduz o desfoque do elemento */
-  transition-duration: .3s; /* Duração da transição para animação */
-}
-
-
-.texto {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-}
-
-.horizontal-list {
-  list-style: none; /* Remove os marcadores de lista padrão */
-  padding: 0; /* Remove o preenchimento padrão da lista */
-  text-align: left; /* Alinha o conteúdo da lista à esquerda */
-}
-
-.horizontal-list li {
-  display: inline-block; /* Exibe os elementos <li> em linha */
-  vertical-align: top; /* Alinha-os ao topo */
-  margin-right: 20px; /* Adiciona espaçamento entre os elementos (ajuste conforme necessário) */
-}
-
-h1 {
-  font-size: 24px; /* Define o tamanho da fonte do título */
-  margin-bottom: 10px; /* Adiciona espaçamento inferior ao título */
-  font-family: 'DM Sans', sans-serif;
-  color: aliceblue;
-  font-size: 55px;
-
-
-}
-
-
-.cadastro {
-  text-decoration: none; /* Remove o sublinhado do link */
-  padding: 1%;
-  font-size: 20px;
-  font-family: 'All the Way to the Sun', sans-serif;
-  color: #12FF46;
-  text-decoration: underline;
-  margin-right: 0;
-  margin-left: 62%;
-  font-weight: bold
-}
-
-.cadastro:hover {
-  text-decoration: underline; /* Sublinha o link ao passar o mouse */
-}
-
-img{
-  margin-left: 50%;
-  height: 60%;
-  margin-bottom: 2px;
-}
-
 .recicle{
-  background-color: #2F8240;
+  background-color: rgb(232, 252, 207);
   padding: 5%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-right: 0;
   text-align: left;
-  
 
 }
 
-
-.reci{
-  color: #031e01;
-  font-family: 'DM Sans', sans-serif ;
-  font-weight: bold;
-  margin-left: 0%;
-  text-align: left;
-  margin-bottom: 2%;
-  
-}
-
-p{
-  color: black;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: bold;
-  margin-left: 0%;
-  font-size: 120%
-
+.cards {
+  background-color: rgb(181, 228, 140);
 
 }
 
-.imagem{
-  margin-right: 15%;
-  display: inline-block;
-  vertical-align: top;
+.text-center {
+  text-align: justify;
 }
 
-
-.reciclar{
-  list-style: none; 
-  padding: 0;
-  text-align: justify; 
-  display: inline-block; 
-  
-}
-
-
-reciclar li {
-  display: inline-block; /* Exibe os elementos <li> em linha */
-  vertical-align: top; /* Alinha-os ao topo */
-  margin-right: 20%; /* Adiciona espaçamento entre os elementos (ajuste conforme necessário) */ 
-
-}
-
-
-
-
-
-
-
-/* ----------   Cards ----------------- */ 
-
-
-
-
-
-.materiais{
-  /* margin-top: 50%; */
-  background-color: #011E11;
-  justify-content: space-around;
-  /* overflow: hidden; */
-  display: flex;
-  margin-right: 10px; /* Espaçamento entre os cards */
-}
-
-
-
-.card {
-margin-top: 10%;
-position: relative;
-/* aspect-ratio: 16/9; */
-background-color: #f2f2f2;
-border-radius: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-perspective: 1000px;
-box-shadow: 0 0 0 5px #ffffff80;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-/* margin-left: 10%; */
-margin-bottom: 10%;
-width: 350px;
-height: 200px;
-border: 1px solid #ccc;
-
-
-/* overflow: hidden; */
-}
-
-.card svg {
-width: 48px;
-fill: #333;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-img{
-  height: 100%;
-  margin-right: 10%; 
-  margin-left:10%
-}
-.card:hover {
-transform: scale(1.05);
-box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__content {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-padding: 20px;
-box-sizing: border-box;
-background-color: #f2f2f2;
-transform: rotateX(-90deg);
-transform-origin: bottom;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-transform: rotateX(0deg);
-}
-
-.card__title {
-margin: 0;
-font-size: 20px;
-color: #333;
-font-weight: 700;
-}
-
-.card:hover svg {
-scale: 0;
-}
-
-.card__description {
-margin: 10px 0 10px;
-font-size: 12px;
-color: #777;
-line-height: 1.4;
-}
-
-.card__button {
-padding: 15px;
-border-radius: 8px;
-background: #c1ff72;
-border: none;
-color: black;
-}
-
-
-.MaisMat{
-text-decoration: none; /* Remove o sublinhado do link */
-font-size: 150%;
-font-family: 'All the Way to the Sun', sans-serif;
-color: #12FF46;
-text-decoration: underline;
-text-align: center;
-}
-
-.logo{
-border: 2px solid #2F8240; /* Adicione uma borda sólida de 2px com a cor #333 */
-
-filter: grayscale(50%); /* Converte a imagem para tons de cinza */
-filter: brightness(150%); /* Aumenta o brilho em 150% */
-
-
-width: 1200%; /* Ajusta a largura da imagem para ocupar toda a largura da div */
-height: 100%; /* A altura ajusta automaticamente para manter a proporção original */
-}
-
-
-.arvore{
-  width: 160%;
-  height: 160%;
-  
-}
