@@ -9,6 +9,7 @@ header {
   background-color: rgb(84, 184, 156);
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
+  
 }
 
 
@@ -76,6 +77,11 @@ body::-webkit-scrollbar-thumb {
     text-align: justify;
     font-size: 100%;
     margin-right: 5%;
+  }
+
+  .nav li {
+    margin-right:1px; /* Reduza a margem direita entre os itens */
+    margin-left:1px; /* Reduza a margem direita entre os itens */
   }
 
   .titulo{
