@@ -18,21 +18,29 @@ header {
 main {
   background-color: rgb(232, 252, 207);
 }
-*estilizando a barra de rolagem*/
+/* 
 body::-webkit-scrollbar {
-  width: 8px;               /* width of the entire scrollbar */
+  width: 8px;          
 }
 
 body::-webkit-scrollbar-track {
-  background: #011E11;        /* color of the tracking area */
+  background: #011E11; 
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #12FF46;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
+  background-color: #12FF46;   
+  border-radius: 20px;   
+} */
+.container-sobre{
+  display: flex;
+  justify-content: center;
 }
 
-
+.corpo{
+  display: flex;
+  justify-content: space-around;
+  max-width: 70%;
+}
  
 
   h1{
@@ -47,7 +55,8 @@ body::-webkit-scrollbar-thumb {
   h2{
     
     color:  #12FF46;
-    font-size: 150%;
+    font-size: xx-large;
+    font-weight: bold;
     text-align: justify;
     font-family: 'DM Sans', sans-serif;
     margin-left: 5%;
@@ -56,7 +65,7 @@ body::-webkit-scrollbar-thumb {
 
   p{
     color: rgb(7, 62, 25);
-    font-size: 100%;
+    font-size: large;
     text-align: justify;
     font-family: 'DM Sans', sans-serif;
     margin-left: 7%;
