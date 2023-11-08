@@ -33,10 +33,8 @@
           <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
         </ul>
         <div class="text-end">
-          <button type="button" class="btn btn-light me-2">
-            <a href="/login">Login</a></button>
-          <button type="button" class="btn btn-light">
-          <a href="/register">Cadastro</a></button>
+        <a class="btn btn-light" href="/login" role="button">Login</a>
+            <a class="btn btn-light" href="/register" role="button">Cadastro</a>
         </div>
       </div>
     </div>
