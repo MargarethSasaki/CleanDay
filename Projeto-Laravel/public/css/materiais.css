@@ -9,31 +9,34 @@ body, ul {
  }
 
 
-header {
-  background-color: rgb(84, 184, 156);
+ header {
+  background-color: green;
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
-  width: 100%;
-  height: 20%;
-
+  
+}
+header img{
+  border-radius: 1000px;
+  padding: 5px;
+  border: 1px solid #fff ;
+  background-color: #fff;
 }
 
 
 main {
   background-color: rgb(232, 252, 207);
 }
-*estilizando a barra de rolagem*/
 body::-webkit-scrollbar {
-  width: 8px;               /* width of the entire scrollbar */
+  width: 8px;          
 }
 
 body::-webkit-scrollbar-track {
-  background: #011E11;        /* color of the tracking area */
+  background: transparent; 
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #12FF46;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
+  background-color: #8d8d8d;   
+  border-radius: 20px;   
 }
 
   
