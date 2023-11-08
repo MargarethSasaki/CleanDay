@@ -6,7 +6,7 @@ body, ul {
 }
 
 header {
-  background-color: rgb(84, 184, 156);
+  background-color: green;
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
   
@@ -16,30 +16,56 @@ header {
 main {
   background-color: rgb(232, 252, 207);
 }
-/* 
+
 body::-webkit-scrollbar {
   width: 8px;          
 }
 
 body::-webkit-scrollbar-track {
-  background: #011E11; 
+  background: transparent; 
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #12FF46;   
+  background-color: #8d8d8d;   
   border-radius: 20px;   
-} */
+}
+.cabecalho{
+  margin: 15px 0;
+  background-image: url('../img/logo.png');
+  background-size: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color:  green;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  width: 85%;
+}
+.cabecalho p{
+  color:rgb(178, 244, 200);
+}
 .container-sobre{
   display: flex;
-  justify-content: center;
+  justify-content: center;  
 }
-
+.img-sobre{
+  background-image: url('../img/sobre/fundo-txt.jpg');
+  background-position: center;
+  background-size: cover;
+}
 .corpo{
   display: flex;
   justify-content: space-around;
-  max-width: 70%;
+  margin: 100px 0;
+
 }
- 
+.corpo div{
+  max-width: 50%;
+}
+
+.corpo img{
+  border-radius: 100px;
+}
 
   h1{
     margin-top: 5%;
@@ -52,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 
   h2{
     
-    color:  #12FF46;
+    color:  black;
     font-size: xx-large;
     font-weight: bold;
     text-align: justify;
@@ -64,6 +90,7 @@ body::-webkit-scrollbar-thumb {
   p{
     color: rgb(7, 62, 25);
     font-size: large;
+    font-weight: 600;
     text-align: justify;
     font-family: 'DM Sans', sans-serif;
     margin-left: 7%;
@@ -77,6 +104,7 @@ body::-webkit-scrollbar-thumb {
     text-align: justify;
     font-size: 100%;
     margin-right: 5%;
+    font-weight: 600;
   }
 
   .nav li {
