@@ -23,7 +23,6 @@ Neste projeto, utilizamos o framework Laravel para criar um site interativo de c
 - Pesquisa de ecopontos com base na localização.
 - Detalhes sobre os materiais aceitos em cada ecoponto.
 - Como Separar cada material
-- Capacidade de adicionar novos ecopontos e informações sobre eles.
 
 ## Instalação
 
@@ -38,14 +37,14 @@ cd cleanday
 3. Instale as dependências
 composer install
 
-4. Copie o arquivo .env.example para .env e configure as informações do banco de dados, entre outras configurações:
-cp .env.example .env
-
-5. Gere a chave de criptografia do aplicativo:
-php artisan key:generate
-
-6. Execute as migrações para criar as tabelas do banco de dados:
+4. Execute as migrações para criar as tabelas do banco de dados:
 php artisan migrate
+
+5. Execute o comando de instalar as dependências
+npm install
+
+6. abra uma nova janela de terminal e execute o comando
+npm run dev
 
 7. Inicie o servidor de desenvolvimento:
 php artisan serve
