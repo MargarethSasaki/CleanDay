@@ -31,19 +31,19 @@ Siga estas etapas para configurar e executar o projeto localmente:
 1. Clone o repositório:
 git clone https://github.com/MargarethSasaki/CleanDay.git
 
-2. Entre na pasta do projeto
+2. Entre na pasta do projeto:
 cd cleanday
 
-3. Instale as dependências
+3. Instale as dependências:
 composer install
 
 4. Execute as migrações para criar as tabelas do banco de dados:
 php artisan migrate
 
-5. Execute o comando de instalar as dependências
+5. Execute o comando de instalar as dependências:
 npm install
 
-6. abra uma nova janela de terminal e execute o comando
+6. abra uma nova janela de terminal e execute o comando:
 npm run dev
 
 7. Inicie o servidor de desenvolvimento:
