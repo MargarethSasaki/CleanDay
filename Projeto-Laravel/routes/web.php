@@ -51,7 +51,7 @@ Route::get('/consulta/{res}', function ($res) {
     $materiaisJSON = json_decode($res);
     // Primeiro, obtenha o ID do material com base no nome fornecido em $res.
     $materialIDs = DB::table('tb03material')
-        ->select('tb03material.id') // Especifique a tabela para evitar ambiguidade
+        ->select('tb03material.id')
         ->where('tb03nome', $materiaisJSON)
         ->get();
 
@@ -59,7 +59,7 @@ Route::get('/consulta/{res}', function ($res) {
     
     // // // Em seguida, use o ID do material para obter os resultados desejados da tabela tb05materiais_unidade.
     $resultados = DB::table('tb05materiais_unidade')
-        ->select('tb05materiais_unidade.tb05id_unidade') // Especifique a tabela para evitar ambiguidade
+        ->select('tb05materiais_unidade.tb05id_unidade')
         ->join('tb03material', 'tb05materiais_unidade.tb05id_material', '=', 'tb03material.id')
         ->whereIn('tb05id_material', $materialIDs->pluck('id')->all())
         ->get();
@@ -71,7 +71,7 @@ Route::get('/consulta/{res}', function ($res) {
         ->whereIn('id', $resultados->pluck('tb05id_unidade')->toArray())
         ->get();
 
-    return response()->json(['resultados' => $resultados, 'unidades' => $unidades, 'endereco' => $endereco]);
+    return response()->json(['resultados' => $materiaisJSON, 'unidades' => $unidades, 'endereco' => $endereco]);
 });
 
  

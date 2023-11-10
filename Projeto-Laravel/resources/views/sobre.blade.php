@@ -26,10 +26,10 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
-        <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
-        <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
-        <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
+        <li><a href="/" class="nav-link px-2 ">CleanDay</a></li>
+        <li><a href="/coleta" class="nav-link px-2 ">Coleta</a></li>
+        <li><a href="/sobre" class="nav-link px-2 ">Sobre</a></li>
+        <li><a href="/materiais" class="nav-link px-2 ">Materiais</a></li>
       </ul>
       <div class="text-end">
           <a class="btn btn-light" href="/login" role="button">Login</a>
@@ -56,10 +56,10 @@
             <h2>A Nossa História</h2>
             <p>Este projeto nasceu da nossa paixão pela tecnologia e do nosso desejo de fazer a diferença no mundo. Vimos a oportunidade de utilizar nossa experiência em TI para abordar uma questão ambiental crucial: a coleta seletiva. A partir desse ponto, começamos a desenvolver um site que facilita a localização de pontos de coleta seletiva na nossa região.</p>
           </div>
-          <img src="https://picsum.photos/500/300" alt="">
+          <img src="img/sobre/historia.jpg" alt="" width="400" height="400">
         </div>
         <div class="corpo">
-          <img src="https://picsum.photos/500/300" alt="">
+        <img src="img/sobre/alvo.jpg" alt="" width="400" height="400">
           <div>
             <h2>Nossa Missão</h2>
             <p>Nossa missão é dupla. Queremos tornar a coleta seletiva mais acessível e prática para todos, ao mesmo tempo em que promovemos a importância da reciclagem. Para alcançar esses objetivos, estamos comprometidos em:</p>
@@ -76,10 +76,10 @@
             <h2>Nossa Visão</h2>
             <p>Imaginamos uma comunidade onde a coleta seletiva seja tão natural quanto escovar os dentes. Queremos que as pessoas tenham acesso fácil a informações sobre locais de coleta, tornando o processo de reciclagem mais conveniente. Nossa visão é contribuir para um futuro mais sustentável, onde o desperdício seja reduzido e o meio ambiente seja respeitado.</p>
           </div>
-          <img src="https://picsum.photos/500/300" alt="">
+          <img src="img/sobre/visao.jpg" alt="" width="400" height="400">
         </div>
         <div class="corpo">
-        <img src="https://picsum.photos/500/300" alt="">
+        <img src="img/sobre/participe.jpg" alt="" width="400" height="400">
           <div>
             <h2>Participe Conosco</h2>
             <p>Se você compartilha de nossos valores e deseja apoiar nossa iniciativa, há várias maneiras de se envolver. Você pode usar nossa ferramenta de consulta de locais de coleta, compartilhar nosso site com amigos e familiares, ou até mesmo se tornar um voluntário em nossos esforços de conscientização. Juntos, podemos fazer a diferença e criar um impacto positivo em nossa comunidade e no meio ambiente.</p>

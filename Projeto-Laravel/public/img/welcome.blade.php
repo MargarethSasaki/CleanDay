@@ -17,7 +17,7 @@
     <body>
 
    <!--NavBar inicio-->
-    <div class ="header">
+   <div class ="header">
   <header class="p-3">
     
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -25,11 +25,11 @@
         <img src="img/logo.png" class="d-block w-100" height="50" width="50" alt="arvore1">
         </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
-          <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
-          <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
-          <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
+          <li><a href="/" class="nav-link px-2 ">CleanDay</a></li>
+          <li><a href="/coleta" class="nav-link px-2 ">Coleta</a></li>
+          <li><a href="/sobre" class="nav-link px-2 ">Sobre</a></li>
+          <li><a href="/materiais" class="nav-link px-2 ">Materiais</a></li>
         </ul>
         <div class="text-end">
           <button type="button" class="btn btn-light me-2">
@@ -38,7 +38,7 @@
           <a href="/register">Cadastro</a></button>
         </div>
       </div>
-    
+
   </header>
  <div>
     <!--NavBar final-->
@@ -191,7 +191,7 @@
 
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-body-success">&copy; 2023 CleanDay, @Copyright</p>
+    <p class="col-md-4 mb-0 text-body-success"></p>
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>

@@ -98,7 +98,7 @@ async function initMap(dados = "") {
                 if (distancia <= 1) {
                     // console.log(posicoes[i])
                     let numeroDoLocal = locais[i].tb02numero == '0'? 's/n' : locais[i].tb02numero;
-                    const enderecoDeDestino = locais[i].tb02logradouro + ',' +  numeroDoLocal + ' - ' + locais[i].tb02bairro + locais[i].tb02cidade + ' - ' + locais[i].tb02estado + ',CEP: ' + locais[i].tb02cep 
+                    const enderecoDeDestino = locais[i].tb02logradouro + ',' +  numeroDoLocal + ' - ' + locais[i].tb02bairro + " " + locais[i].tb02cidade + ' - ' + locais[i].tb02estado + ',CEP: ' + locais[i].tb02cep 
                     const infoWindow = new google.maps.InfoWindow({
                         content:'<div class="container-infowindow">'+
                                     '<h3>'+ unidades[i].tb04nome +'</h3>'+

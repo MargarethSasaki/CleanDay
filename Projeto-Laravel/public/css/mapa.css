@@ -20,6 +20,23 @@ header img{
 header a{
   text-decoration: none;
   color: black;
+  
+}
+header .nav a{
+  border-radius: 10px;
+  color: #fff;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+header .nav li{
+  margin: 0 5px;
+  border-radius: 5px;
+  
+}
+header .nav a:hover{
+  background-color: #f2f2f2;
+  color: green;
 }
 
 /* Sumir */

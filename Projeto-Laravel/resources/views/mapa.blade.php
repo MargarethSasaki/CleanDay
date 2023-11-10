@@ -28,10 +28,10 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
-          <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
-          <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
-          <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
-          <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
+          <li><a href="/" class="nav-link px-2 ">CleanDay</a></li>
+          <li><a href="/coleta" class="nav-link px-2 ">Coleta</a></li>
+          <li><a href="/sobre" class="nav-link px-2 ">Sobre</a></li>
+          <li><a href="/materiais" class="nav-link px-2 ">Materiais</a></li>
         </ul>
         <div class="text-end">
           <button type="button" class="btn btn-light me-2">
@@ -90,7 +90,7 @@
                         <label for="vidro">Vidro</label>
                     </div>
                     <div class="controller">
-                        <input type="radio" name="material" id="plastico">
+                        <input type="radio" name="material" id="plástico">
                         <label for="plastico">Plástico</label>
                     </div>
                     <div class="controller">

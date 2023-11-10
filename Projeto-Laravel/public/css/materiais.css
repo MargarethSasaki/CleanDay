@@ -28,8 +28,24 @@ header img{
 header a{
   text-decoration: none;
   color: black;
+  
 }
-
+header .nav a{
+  border-radius: 10px;
+  color: #fff;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+header .nav li{
+  margin: 0 5px;
+  border-radius: 5px;
+  
+}
+header .nav a:hover{
+  background-color: #f2f2f2;
+  color: green;
+}
 
 main {
   background-color: rgb(232, 252, 207);
@@ -342,7 +358,7 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #ecf7ec;
   color: black;
   font-size: 140%;
   font-weight: bold;
@@ -353,14 +369,15 @@ body::-webkit-scrollbar-thumb {
   height: 90%;
   width: 50%;
   border: 2px solid #000;
-  background-image: url('../img/materiais/recicla.avif');
+  /* background-image: url('../img/materiais/reciclar.webp'); */
   background-position: center;
   background-repeat: no-repeat;
+  display: inline-block;
+  backdrop-filter: blur(15px);
 }
 .popup-conteudo div{
   margin: 15px 0;
-  display: inline-block;
-  backdrop-filter: blur(15px);
+  
   height: 90%;
   width: 100%;
 }
