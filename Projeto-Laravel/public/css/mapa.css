@@ -1,22 +1,27 @@
 /* Reset de estilos padrão do navegador */
-body, ul {
+*{
   margin: 0;
   padding: 0;
-  
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-  background-color: rgb(82, 182, 154);
+  background-color: green;
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
+  
+}
+header img{
+  border-radius: 1000px;
+  padding: 5px;
+  border: 1px solid #fff ;
+  background-color: #fff;
+}
+header a{
+  text-decoration: none;
+  color: black;
 }
 
-@font-face{
-  font-family: 'DMsans'; /* Escolha um nome para a sua fonte */
-src: url(fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf) format('woff2'), /* Formato recomendado para a web */
-     /* url('caminho-para-o-arquivo-fonte.woff') format('woff'); Formato de fallback para compatibilidade */
-/* Você pode adicionar outras variações da sua fonte aqui, como font-weight e font-style */
-}
 /* Sumir */
 .hide{
 display:none !important;
@@ -96,6 +101,7 @@ background-color: #80e293;
 border: 2px solid #fff;
 border-radius: 5px;
 }
+
 .container-infowindow p:has(a){
 display: flex;
 justify-content: end;
@@ -110,9 +116,11 @@ aside{
   overflow: auto;
   color: aliceblue;
   font-family: 'DM Sans', sans-serif;
+  height: 88vh;
 }
-aside h2{
+aside h3{
   margin-bottom: 5px;
+  margin-top: 15px;
 }
 aside::-webkit-scrollbar{
   width: 5px;
@@ -264,4 +272,8 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none; /* Remover sublinhado dos links */
   color: #12FF46; /* Cor do texto dos links */
   font-weight: bold; /* Estilo de fonte negrito */
+}
+
+#gmp-map{
+  height: 88vh;
 }

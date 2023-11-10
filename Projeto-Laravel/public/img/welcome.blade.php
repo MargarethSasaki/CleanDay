@@ -19,7 +19,7 @@
    <!--NavBar inicio-->
     <div class ="header">
   <header class="p-3">
-    <div class="container">
+    
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items- mb-2 mb-lg-0 text-white text-decoration-none ">
         <img src="img/logo.png" class="d-block w-100" height="50" width="50" alt="arvore1">
@@ -38,7 +38,7 @@
           <a href="/register">Cadastro</a></button>
         </div>
       </div>
-    </div>
+    
   </header>
  <div>
     <!--NavBar final-->

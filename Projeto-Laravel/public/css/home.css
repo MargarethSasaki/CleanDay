@@ -1,17 +1,20 @@
 /* Reset de estilos padrão do navegador */
-body, ul {
+*{
   margin: 0;
   padding: 0;
-  
+  font-family: 'Roboto', sans-serif;
+}
 
-  
+.centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
   background-color: green;
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
-  
 }
 header img{
   border-radius: 1000px;
@@ -19,47 +22,142 @@ header img{
   border: 1px solid #fff ;
   background-color: #fff;
 }
+header a{
+  text-decoration: none;
+  color: black;
+}
+.selecionado{
+  border-bottom: 2px solid #fff !important;
+}
 
 
 
 main {
   background-color: rgb(232, 252, 207);
+  padding: 1rem 5rem;
 }
+/*estilizando a barra de rolagem*/
 body::-webkit-scrollbar {
-  width: 8px;          
+  width: 5px;               /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent; 
+  background: #fff;        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #8d8d8d;   
-  border-radius: 20px;   
+  background-color: #c9c1c1;    /* color of the scroll thumb */
+     /* roundness of the scroll thumb */
+}
+
+.card-text::-webkit-scrollbar{
+  width: 3px;
+}
+.card-text::-webkit-scrollbar-track{
+  background: #fff; 
+}
+.card-text::-webkit-scrollbar-thumb{
+  background-color: #c9c1c1;
 }
 
 /* Estilizando a navbar */
 .navbar {
   background-color: rgb(82, 182, 154);
-  
-  width: 100%
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  min-width: 80%;
 }
 
-.recicle{
-  background-color: rgb(232, 252, 207);
-  padding: 5%;
-  font-family: 'Roboto', sans-serif;
-  margin-right: 0;
-  text-align: left;
+.items{
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
 
+
+.items a{
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: large;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.items a:hover{
+  background-color: #3da35d;
+}
+
+
+
+
+.items ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.items li{
+  margin: 0 2rem;
+  padding: 50px 2rem;
+}
+.items li:hover{
+  background-color: #3da35d;
+  color: rgb(181, 228, 140);
+}
+.items li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: large;
+}
+
+.items img{
+  margin: 5px 15px;
+}
+.container-reciclar{
+  border-radius: 15px;
+  background-color: rgb(214, 250, 166);
+  margin: 20px 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.container-reciclar h1{
+  color: #fff;
+  text-shadow: 3px 3px #000;
+}
+
+.container-reciclar p{
+  padding: 0 20px;
+  font-size: large;
 }
 
 .cards {
   background-color: rgb(181, 228, 140);
+  border-radius: 15px;
+}
+.card{
+  border-radius: 15px !important;
+  padding: 0 25px;
+}
 
+.card-text{
+  height: 200px;
+  overflow: auto;
 }
 
 .text-center {
   text-align: justify;
 }
 
+/* footer */
+.footer{
+  margin: 0;
+  background-color: rgb(181, 228, 140);;
+}

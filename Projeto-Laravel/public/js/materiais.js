@@ -27,7 +27,7 @@ const infmateriais = {
             "inf": "A reciclagem de tecidos desempenha um papel fundamental na promoção da sustentabilidade na indústria da moda e na redução do impacto ambiental. É importante conscientizar as pessoas sobre a importância de doar roupas usadas em boas condições, reciclar roupas danificadas e procurar opções de compra de roupas de segunda mão. Isso contribui para um ciclo mais sustentável e reduz o desperdício têxtil."
         },
         {
-            "material": "pilhas",
+            "material": "Pilhas",
             "inf": "A reciclagem de pilhas é um processo importante para minimizar os impactos ambientais negativos associados à disposição inadequada de pilhas usadas, que contêm substâncias tóxicas e metais pesados. As pilhas usadas podem liberar substâncias perigosas, como mercúrio, cádmio e chumbo, quando descartadas de forma inadequada, representando riscos para a saúde humana e o meio ambiente. É crucial ressaltar que a reciclagem de pilhas é fundamental para evitar a poluição ambiental e a contaminação por substâncias tóxicas. As pilhas usadas não devem ser descartadas no lixo comum, pois representam um risco significativo para o meio ambiente e a saúde pública. Em muitas regiões, existem regulamentações rigorosas que proíbem o descarte inadequado de pilhas e incentivam sua reciclagem. Portanto, é fundamental seguir as práticas de reciclagem apropriadas e contribuir para a proteção do meio ambiente."
         },
         {
@@ -46,7 +46,7 @@ const infmateriais = {
     ]
 }
 
-const materiasBtn = [...document.querySelectorAll(".cards-Materiais")]
+const materiasBtn = [...document.querySelectorAll(".button-material")]
 const titulopopup = document.querySelector("#popup-titulo")
 const conteudoPopUp = document.querySelector("#popup-texto")
 const popup = document.querySelector(".popup")

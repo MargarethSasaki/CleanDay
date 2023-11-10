@@ -20,22 +20,20 @@
 <!--NavBar inicio-->
 <div class ="header">
   <header class="p-3">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items- mb-2 mb-lg-0 text-white text-decoration-none ">
-        <img src="img/logo.png" class="d-block w-100" height="50" width="50" alt="arvore1">
-        </a>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items- mb-2 mb-lg-0 text-white text-decoration-none ">
+      <img src="img/logo.png" class="d-block w-100" height="50" width="50" alt="arvore1">
+      </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
-          <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
-          <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
-          <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
-        </ul>
-        <div class="text-end">
-            <a class="btn btn-light" href="/login" role="button">Login</a>
-            <a class="btn btn-light" href="/register" role="button">Cadastro</a>
-        </div>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-white">CleanDay</a></li>
+        <li><a href="/coleta" class="nav-link px-2 text-white">Coleta</a></li>
+        <li><a href="/sobre" class="nav-link px-2 text-white">Sobre</a></li>
+        <li><a href="/materiais" class="nav-link px-2 text-white">Materiais</a></li>
+      </ul>
+      <div class="text-end">
+          <a class="btn btn-light" href="/login" role="button">Login</a>
+          <a class="btn btn-light" href="/register" role="button">Cadastro</a>
       </div>
     </div>
   </header>

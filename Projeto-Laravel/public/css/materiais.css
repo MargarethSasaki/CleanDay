@@ -8,8 +8,12 @@ body, ul {
   background-color: #cdeac5;
  }
 
-
- header {
+.centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
   background-color: green;
   font-size: 120%; /* Aumenta o tamanho da fonte em 20% em relação ao tamanho padrão */
   font-weight: bold;
@@ -21,28 +25,33 @@ header img{
   border: 1px solid #fff ;
   background-color: #fff;
 }
+header a{
+  text-decoration: none;
+  color: black;
+}
 
 
 main {
   background-color: rgb(232, 252, 207);
 }
+/*estilizando a barra de rolagem*/
 body::-webkit-scrollbar {
-  width: 8px;          
+  width: 5px;               /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent; 
+  background: #fff;        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #8d8d8d;   
-  border-radius: 20px;   
+  background-color: #c9c1c1;    /* color of the scroll thumb */
+     /* roundness of the scroll thumb */
 }
 
   
   /*cards*/
 
-  
+
  
   .carde{
     
@@ -59,9 +68,14 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 6%;
   } 
 
-  
+  /* .carde-tudo{
+    background-image: url('/img/Eletronicos.jpg');
+    background-position: center;
+    background-size: cover;
+  } */
 
   .temporaryy_text {
+    
     font-weight: bold;
     font-size: 26px;
     padding: 6px 12px;
@@ -147,46 +161,70 @@ body::-webkit-scrollbar-thumb {
   
   
 
-  .card  {
+  /* .card  {
     width: 200px;
     height: 350px;
-    background-image: linear-gradient(163deg, #00ffaa 0%, #5eff00 100%);
     border-radius: 20px;
     transition: all .3s;
     display: flex;
-    /* float: left; */
-    margin-left: 7.5% ;
-    margin-top: 3%;
+    float: left;
+    
     text-align: center;
     color: white;
-    box-shadow: 3px 3px 20px 2px #2e2d31;
-    
-   }
+    box-shadow: 3px 3px #2e2d31;
+    padding: 10px;
+   } */
 
 
    h1{
     color: #90e4ac;
    }
    
-   .card2 {
+   .card {
     width: 200px;
-    height: 350px;
+    margin-left: 7.5% ;
+    margin-top: 3%;
+    padding-bottom: 10px;
     background-color: #132e20;
+    border: 1px solid #333 !important;
     border-radius: 5px;
-    padding: 0 3px;
     transition: all .2s;
     color: #f8f8f8;
+    box-shadow: -3px -3px #333;
+    background-position: top;
+    background-size: cover;
    }
-   
-   .card2:hover {
-    transform: scale(0.98);
-    border-radius: 20px;
+   .card h3{
+    text-align: center;
+    background-color: #52b69a;
+    padding: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
    }
-   
-   .card:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   .card p{
+    text-align: center;
+    padding: 20px;
+    font-size: large;
    }
-  
+  .card .button-material{
+    padding: 5px;
+    font-weight: bold;
+    font-size: small;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 15px;
+    width: 100px;
+  }
+  .card-conteudo{
+    height: 300px;
+    font-weight: bold;
+  }
+  .card-conteudo p{
+    color: #333;
+    text-shadow: 2px 2px #52b69a;
+    display: inline-block; /* Para que o backdrop-filter funcione corretamente */
+    backdrop-filter: blur(1px); /* Ajuste o valor de acordo com a intensidade do desfoque desejado */
+  }
 
    
   .cardz  {
@@ -204,10 +242,6 @@ body::-webkit-scrollbar-thumb {
     color: white;
     box-shadow: 3px 3px 20px 2px #2e2d31;
    }
-
-.par{
-  margin-bottom: 45%;
-}
    
    .cardz:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.3);
@@ -288,29 +322,57 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    padding: 55px;
+}
+
+/*estilizando a barra de rolagem*/
+.popup-conteudo::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+.popup-conteudo::-webkit-scrollbar-track {
+  background: #fff;        /* color of the tracking area */
+}
+
+.popup-conteudo::-webkit-scrollbar-thumb {
+  background-color: #c9c1c1;    /* color of the scroll thumb */
+     /* roundness of the scroll thumb */
 }
 
 .popup-conteudo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #5d813d;
-    color: white;
-    font-size: 140%;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    overflow: auto;
-    height: 50%;
-    width: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: black;
+  font-size: 140%;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: auto;
+  height: 90%;
+  width: 50%;
+  border: 2px solid #000;
+  background-image: url('../img/materiais/recicla.avif');
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
+.popup-conteudo div{
+  margin: 15px 0;
+  display: inline-block;
+  backdrop-filter: blur(15px);
+  height: 90%;
+  width: 100%;
+}
 .fechar {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 20px;
+    font-size: x-large;
     cursor: pointer;
 }
 
