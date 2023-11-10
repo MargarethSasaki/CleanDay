@@ -55,7 +55,8 @@
 
           <div class="carde-tudo">
             <div class="temporaryy_text">
-              Como a produção de lixo pode afetar o meio ambiente e nosssas vidas?? Aqui estão algumas matérias sobre o tema:
+              <p>Como a produção de lixo pode afetar o meio ambiente e nosssas vidas?? Aqui estão algumas matérias sobre o tema:</p>
+              <img src="img/fundo6.png" height="100%" width="100%" alt="tampa de garrafa">
             </div>
             <div class="carde_content">
               <span class="card_title">Tudo sobre reciclagem</span>
@@ -70,7 +71,8 @@
 
         <article class="carde">
           <div class="temporaryy_text">
-            Entenda o que é reaproveitamento de resíduos e quais são os métodos mais utilizados!
+            <p>Entenda o que é reaproveitamento de resíduos e quais são os métodos mais utilizados!</p>
+            <img src="img/fundo6.png" height="100%" width="100%" alt="tampa de garrafa">
           </div>
           <div class="carde_content">
             <span class="carde_title">Desperdício de alimento</span>
@@ -284,7 +286,7 @@
           </div>
 
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+            <li class="ms-3"><a class="text-body-secondary" href=""><svg class="bi" width="24" height="24">
                   <use xlink:href="#twitter" />
                 </svg></a></li>
             <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/cleandayrecicles/"><svg class="bi" width="24" height="24">

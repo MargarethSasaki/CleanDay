@@ -73,9 +73,11 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     font-size: 26px;
     padding: 6px 12px;
-    color: #f8f8f8;
-   
-  }
+    color: #ffffff;
+    background-image: url('/img/fundo6.png'); /* Caminho relativo ao diretório public */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem no contêiner */
+}
   
   .card_title {
     font-weight: bold;
