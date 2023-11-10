@@ -172,7 +172,7 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/CleanDay873244"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
       <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/cleandayrecicles/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
       <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/people/CleanDay-Day/pfbid023MYHtEpw1t4nCPThyqoRvt6nPS3EbU1zDTM68y53t1JaVtCnWWWR6nKW7tW6VKc7l/"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
     </ul>
