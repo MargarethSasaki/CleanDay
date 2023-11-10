@@ -89,16 +89,20 @@ border: 1.5px solid black;
 border-radius: 5px;
 }
 .container-infowindow p{
+color: #fff;
 font-size: larger;
 font-weight: bold;
+}
+.container-infowindow b{
+  color: #000;
 }
 .container-infowindow a{
 font-size: large;
 text-decoration: none;
-color: black;
+color: rgb(84, 84, 221);
 padding: 8px 15px;
 background-color: #80e293;
-border: 2px solid #fff;
+border: 2px solid #000;
 border-radius: 5px;
 }
 

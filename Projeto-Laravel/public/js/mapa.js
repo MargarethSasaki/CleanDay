@@ -103,10 +103,10 @@ async function initMap(dados = "") {
                         content:'<div class="container-infowindow">'+
                                     '<h3>'+ unidades[i].tb04nome +'</h3>'+
                                     '<div>'+
-                                    '<p>Horário: '+ unidades[i].tb04horarioFunc +'</p>'+
-                                    '<p>Contato: '+ unidades[i].tb04tel +'</p>'+
-                                    '<p>localização: '+ enderecoDeDestino +'</p>'+
-                                    '<p>Coleta: '+ materiais +'</p>'+
+                                    '<p><b>Horário:</b> '+ unidades[i].tb04horarioFunc +'</p>'+
+                                    '<p><b>Contato:</b> '+ unidades[i].tb04tel +'</p>'+
+                                    '<p><b>localização:</b> '+ enderecoDeDestino +'</p>'+
+                                    '<p><b>Coleta:</b> '+ materiais +'</p>'+
                                     '<p><a href="https://www.google.com.br/maps/dir/'+ dados[0] +', Brasil /' + enderecoDeDestino + '">'+
                                     '<span>Veja como chegar lá </span><i class="fa fa-road"></i>'+
                                     '</a></p>'+
@@ -167,7 +167,7 @@ async function initMap(dados = "") {
   function centroBusca(map,coord,raio){
     const testewindow = new google.maps.InfoWindow({
         content:'<div class="container-infowindow">'+
-                    '<h3>'+  +'</h3>'+
+                    '<h3>Seu Local</h3>'+
                 '</div>'
       });
     const circle = new google.maps.Circle({
@@ -261,11 +261,16 @@ btnEnviar.addEventListener("click", async ()=>{
             materiailBuscado = label.innerHTML
         }
     })
+    
     let dados = [buscaLocal.value,raio.innerHTML,materiailBuscado]
     buscaLocal.value = ''
     containerMapa.classList.remove("visible")
     loader.classList.remove("hide")
     initMap(dados)
+
+    radios.map(el => el.checked = false)
+    numeroRaio = 1
+    raio.innerHTML = '1'
 })
 
 boxraio.map((el)=>{
@@ -279,16 +284,16 @@ boxraio.map((el)=>{
             raio.innerHTML = numeroRaio;
         }
     })
-    el.addEventListener("mousedown",()=>{
-        let raio = document.querySelector("#raio")
-        if(el.id == '+' && numeroRaio < 51){
-            numeroRaio += 1;
-            raio.innerHTML = numeroRaio;
-        }else if(el.id == '-' && numeroRaio > 1){
-            numeroRaio -= 1;
-            raio.innerHTML = numeroRaio;
-        }
-    })
+    // el.addEventListener("mousedown",()=>{
+    //     let raio = document.querySelector("#raio")
+    //     if(el.id == '+' && numeroRaio < 51){
+    //         numeroRaio += 1;
+    //         raio.innerHTML = numeroRaio;
+    //     }else if(el.id == '-' && numeroRaio > 1){
+    //         numeroRaio -= 1;
+    //         raio.innerHTML = numeroRaio;
+    //     }
+    // })
 })
 
 
